@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta charset="UTF-8"></meta><meta http-equiv="x-ua-compatible" content="IE=edge"></meta><meta name="format-detection" content="telephone=no"></meta><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"></meta><meta name="search" content="default"></meta><meta name="use.ic" content="no"></meta><meta name="tocstandalone" content="no"></meta><link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|Material+Icons" rel="stylesheet"></link><meta name="theme" content="1"></meta><meta name="search.placeholder" content="Search"></meta><meta name="search.results" content="Search results"></meta><meta name="no.search.results" content="No results found"></meta><script type="text/javascript">
+var theme = '1';
+
+
+			var indexDict = new Array();
+			var store = {};
+			var portalLanguage = 'en';
+			
+					var local_csh = false;
+				
+			var useanchorlinks = false;
+			</script><title>MapR</title><link rel="stylesheet" type="text/css" href="../../../css/docbook.css"></link><link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css"></link><link rel="stylesheet" type="text/css" href="../../../css/font-awesome.css"></link><link rel="stylesheet" type="text/css" href="../../../css/style-print.css"></link><link rel="stylesheet" type="text/css" href="../../../css/style-common.css"></link><link rel="stylesheet" type="text/css" href="../../../css/style-modern-tables.css"></link><link rel="stylesheet" type="text/css" href="../../../css/theme1.css"></link><link rel="stylesheet" type="text/css" href="../../../css/theme1-colors.css"></link><link rel="stylesheet" type="text/css" href="../../../css/content-theme2.css"></link><link rel="stylesheet" type="text/css" href="../../../css/graphical-lists.css"></link><script src="../../../js/jquery-3/jquery-3.3.1.min.js" type="text/javascript"></script><script src="../../../js/jquery-migrate-3.0.1.min.js" type="text/javascript"></script><script src="../../../js/materialize.min.js" type="text/javascript"></script><script src="../../../js/bootstrap.min.js" type="text/javascript"></script><script src="../../../js/purl.js" type="text/javascript"></script><script src="../../../js/html5-2-mp-common.js" type="text/javascript"></script><script src="../../../js/html5-2.js" type="text/javascript"></script><script src="../../../js/clipboard.min.js" type="text/javascript"></script><script src="../../../js/fuse.min.js" type="text/javascript"></script><script src="../../../js/hilitor.js" type="text/javascript"></script><script src="../../../js/html5.fuse.search.js" type="text/javascript"></script><script src="../../js/fuzzydata.js" type="text/javascript"></script><script src="../../../js/csh.js" type="text/javascript"></script><meta xmlns:xlink="http://www.w3.org/1999/xlink" name="generator" content="Paligo"></meta><link rel="prev" href="hortonworks-data-platform--hdp-.html" title="Hortonworks Data Platform (HDP)"></link><link rel="next" href="../user-guide.html" title="User Guide"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script><script>
+				$(document).ready(function () {
+				$(".mediaobject img").addClass('materialboxed');
+				//Exclude images with links
+				$(".mediaobject a img").removeClass('materialboxed');
+				$('.materialboxed').materialbox();
+				});
+			</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/googlecode.min.css"></link><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script><script type="text/javascript">
+				$(document).ready(function(){
+				$('pre').each(function(i, block) {
+				hljs.highlightBlock(block);
+				});
+				});
+			</script></head><body class="theme1" data-link-prefix="../../"><header class="site-header"><nav class="site-header-navbar navbar navbar-fixed-top"><div class="navbar-container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div id="logotype-container" class="pull-left"><a class="navbar-brand" href="../../../index.html?lang=en"><img id="logotype-pageheader" src="../../../css/image/corporate-logo.svg" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div></div><div id="navbar" class="navbar-collapse collapse"><ul class="nav navbar-nav"><li><a href="#">Topnav item</a></li><li><a href="#">Topnav item 2</a></li><li><a href="#">Topnav item 3</a></li></ul></div></div></nav></header><div class="site-body"><div class="site-body-container"><div class="site-body-row"><aside class="site-sidebar"><div class="site-sidebar-header"><a href="../../../index.html?lang=en"><img id="logotype-pageheader" src="../../../css/image/corporate-logo.svg" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div><form class="site-sidebar-search" autocomplete="off"><input type="text" class="form-control search-field" placeholder="Search" id="aa-search-input"></input></form><ul class="toc nav nav-site-sidebar"><li><a href="../../unravel-4-3.html" class="topic-link section original-topic" data-origin-id="UUID-ad4faae7-0575-21de-ae5b-a25189b2119c" data-permalink="unravel-4-3.html" data-topic-level="1" data-relative-prefix=""><span class="glyphicon"></span> Unravel 4.3</a><ul><li><a href="../../unravel-4-3.html#UUID-cf26a2d6-427f-5e20-e5d4-d09fdc2c4890_id_Unravel43-ThisDocumentationisforUnravelVersion43" class="topic-link section internal" data-origin-id="">This Documentation is for Unravel Version 4.3</a></li><li><a href="../../unravel-4-3/overview.html" class="topic-link section original-topic" data-origin-id="UUID-79e407a7-688a-42d4-5a12-d4183b8bd5b0" data-permalink="unravel-4-3/overview.html" data-topic-level="2" data-relative-prefix="../"><span class="glyphicon"></span> Overview</a><ul><li><a href="../../unravel-4-3/overview.html#UUID-736e9383-473a-f9b3-aa12-2fbf7e7a1fd9_id_Overview-WhereDoesUnravelServerReside" class="topic-link section internal" data-origin-id="">Where Does Unravel Server Reside?</a></li><li><a href="../../unravel-4-3/overview.html#UUID-736e9383-473a-f9b3-aa12-2fbf7e7a1fd9_id_Overview-WhatDoesaBasicDeploymentProvide" class="topic-link section internal" data-origin-id="">What Does a Basic Deployment Provide?</a></li><li><a href="../../unravel-4-3/overview.html#UUID-736e9383-473a-f9b3-aa12-2fbf7e7a1fd9_id_Overview-WhatAreAdvancedDeploymentOptions" class="topic-link section internal" data-origin-id="">What Are Advanced Deployment Options?</a></li></ul></li><li><a href="../../unravel-4-3/installation-guides.html" class="topic-link section original-topic" data-origin-id="UUID-27409536-9797-9e9a-4a94-0464bea9f853" data-permalink="unravel-4-3/installation-guides.html" data-topic-level="2" data-relative-prefix="../"><span class="glyphicon"></span> Installation Guides</a><ul><li><a href="../../unravel-4-3/installation-guides/cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html" class="topic-link section original-topic" data-origin-id="UUID-b0e75fdf-00ff-9f98-2d49-44380e8470b2" data-permalink="unravel-4-3/installation-guides/cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html" data-topic-level="3" data-relative-prefix="../../">Cloudera Distribution Including Apache Hadoop (CDH), with Cloudera Manager (CM)</a></li><li><a href="../../unravel-4-3/installation-guides/hortonworks-data-platform--hdp-.html" class="topic-link section original-topic" data-origin-id="UUID-35ff77fc-e768-55bd-118a-21a5a8eabdf5" data-permalink="unravel-4-3/installation-guides/hortonworks-data-platform--hdp-.html" data-topic-level="3" data-relative-prefix="../../">Hortonworks Data Platform (HDP)</a></li><li><a href="../../unravel-4-3/installation-guides/mapr.html" class="topic-link section original-topic" data-origin-id="UUID-86b32cb8-0df7-079d-2a9c-0ade3a4fa4a0" data-permalink="unravel-4-3/installation-guides/mapr.html" data-topic-level="3" data-relative-prefix="../../">MapR</a></li></ul></li><li><a href="../../unravel-4-3/user-guide.html" class="topic-link section original-topic" data-origin-id="UUID-881209c5-e7cc-2205-b4a2-1d2b9d1a231f" data-permalink="unravel-4-3/user-guide.html" data-topic-level="2" data-relative-prefix="../"><span class="glyphicon"></span> User Guide</a><ul><li><a href="../../unravel-4-3/user-guide/getting-started.html" class="topic-link section original-topic" data-origin-id="UUID-617a6a3f-b72d-3605-1807-5f307b05320e" data-permalink="unravel-4-3/user-guide/getting-started.html" data-topic-level="3" data-relative-prefix="../../">Getting Started</a></li><li><a href="../../unravel-4-3/user-guide/common-ui-features.html" class="topic-link section original-topic" data-origin-id="UUID-f20f4ecd-6c33-d07f-67cf-020ef8a6a21f" data-permalink="unravel-4-3/user-guide/common-ui-features.html" data-topic-level="3" data-relative-prefix="../../">Common UI Features</a></li><li><a href="../../unravel-4-3/user-guide/auto-actions.html" class="topic-link section original-topic" data-origin-id="UUID-b985bbe7-0d13-0640-b319-564240760706" data-permalink="unravel-4-3/user-guide/auto-actions.html" data-topic-level="3" data-relative-prefix="../../">Auto Actions</a></li></ul></li><li><a href="../../unravel-4-3/advanced-topics.html" class="topic-link section original-topic" data-origin-id="UUID-c677c0ff-a929-c9c6-1093-78155532b704" data-permalink="unravel-4-3/advanced-topics.html" data-topic-level="2" data-relative-prefix="../">Advanced Topics</a></li><li><a href="../../unravel-4-3/troubleshooting.html" class="topic-link section original-topic" data-origin-id="UUID-ebe9fdd5-3059-536a-88fd-cfdf17fbc6af" data-permalink="unravel-4-3/troubleshooting.html" data-topic-level="2" data-relative-prefix="../">Troubleshooting</a></li><li><a href="../../unravel-4-3/appendices.html" class="topic-link section original-topic" data-origin-id="UUID-b4f8bb84-90d1-537f-04dc-529a76089c3d" data-permalink="unravel-4-3/appendices.html" data-topic-level="2" data-relative-prefix="../">Appendices</a></li><li><a href="../../unravel-4-3/release-notes.html" class="topic-link section original-topic" data-origin-id="UUID-a91983de-6c9c-f9ec-477f-5acda3716abb" data-permalink="unravel-4-3/release-notes.html" data-topic-level="2" data-relative-prefix="../">Release Notes</a></li></ul></li></ul></aside><div class="site-content"><h1 class="publication-title">UN43 (Unravel 4.3)</h1><div class="toolbar"><div class="toolbar-tools"><div class="tool-print"><i class="fa fa-print" aria-hidden="true">print</i></div><div class="tool-search"><i class="fa fa-search" aria-hidden="true"></i></div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><div class="breadcrumb-container"><ul class="breadcrumb"><li class="breadcrumb-link"> <a href="../../index-en.html">UN43 (Unravel 4.3)</a></li><li class="breadcrumb-link"><a href="../../unravel-4-3.html">Unravel 4.3</a></li><li class="breadcrumb-link"><a href="../installation-guides.html">Installation Guides</a></li><li class="breadcrumb-node">MapR</li></ul></div></div><main><div id="top-pager"><ul class="pager"><li class="previous"><a accesskey="p" id="header-navigation-prev" class="pull-left prev visible-lg visible-md" href="hortonworks-data-platform--hdp-.html">Prev</a></li><li class="next"><a accesskey="n" id="header-navigation-next" class="pull-right next visible-lg visible-md" href="../user-guide.html">Next</a></li></ul></div><article class="topic content-container" id="content-wrapper"><div id="topic-content" class="topic-content"><section xml:lang="en" dir="ltr" class="section original-topic" data-origin-id="UUID-86b32cb8-0df7-079d-2a9c-0ade3a4fa4a0" data-permalink="unravel-4-3/installation-guides/mapr.html" data-topic-level="3" data-relative-prefix="../../" id="UUID-172b4948-3c89-bd0e-f4a7-9f325749a86f"><div class="titlepage"><div><div class="title"><h4 class="title">MapR</h4></div></div></div><div dir="ltr" class="note"><h3 class="title">Note</h3><p>This guide is compatible with</p><div class="itemizedlist"><ul style="list-style-type: disc; " class="itemizedlist"><li class="listitem"><p>MapR 5.1, 5.2, 6.0.1</p></li></ul></div></div><section dir="ltr" class="section internal" data-origin-id="" id="UUID-172b4948-3c89-bd0e-f4a7-9f325749a86f_id_MapR-OrderedSteps"><div class="titlepage"><div><div class="title"><h5 class="title">Ordered Steps</h5></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                <a class="link" href="mapr.html#UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa" title="Step 1: Install Unravel Server on MapR">Step 1: Install Unravel Server on MapR</a>
+              </p></li><li class="listitem"><p>
+                <a class="link" href="mapr.html#UUID-6462597c-ddfa-53a1-fc4c-bab4e04c980f" title="Step 2: Enable Additional Data Collection / Instrumentation for MapR">Step 2: Enable Additional Data Collection / Instrumentation
+for MapR</a>
+              </p></li></ul></div></section><section xml:lang="en" dir="ltr" class="section original-topic" data-origin-id="UUID-ee2c21c1-59c8-93da-4499-95acf23177be" id="UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa"><div class="titlepage"><div><div class="title"><h5 class="title">Step 1: Install Unravel Server on MapR</h5></div></div></div><p>
+          <span class="bold"><strong>Table of Contents</strong></span>
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+              <a class="link" href="mapr.html#UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-Introduction" title="Introduction">Introduction</a>
+            </p></li><li class="listitem"><p>
+              <a class="link" href="mapr.html#UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-Pre-InstallationCheck" title="Pre-Installation Check">Pre-Installation
+Check</a>
+            </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>
+                  <a class="link" href="mapr.html#UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-PlatformCompatibility" title="Platform Compatibility">Platform
+Compatibility</a>
+                </p></li><li class="listitem"><p>
+                  <a class="link" href="mapr.html#UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-Hardware" title="Hardware">Hardware</a>
+                </p></li><li class="listitem"><p>
+                  <a class="link" href="mapr.html#UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-Software" title="Software">Software</a>
+                </p></li><li class="listitem"><p>
+                  <a class="link" href="mapr.html#UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-AccessPermissions" title="Access Permissions">Access
+Permissions</a>
+                </p></li><li class="listitem"><p>
+                  <a class="link" href="mapr.html#UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-Network" title="Network">Network</a>
+                </p></li></ul></div></li><li class="listitem"><p>
+              <a class="link" href="mapr.html#UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-1ConfiguretheHostMachine" title="1. Configure the Host Machine">1.
+Configure the Host Machine</a>
+            </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>
+                  <a class="link" href="mapr.html#UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-AllocateaClusterGatewayEdgeClientHostwithHDFSAccess" title="Allocate a Cluster Gateway/Edge/Client Host with HDFS Access">
+Allocate a Cluster Gateway/Edge/Client Host with HDFS
+Access</a>
+                </p></li><li class="listitem"><p>
+                  <a class="link" href="mapr.html#UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-ConfiguretheHostBeforeinstallingtheRPM" title="Configure the Host Before installing the RPM">
+Configure the Host Before installing the RPM</a>
+                </p></li></ul></div></li><li class="listitem"><p>
+              <a class="link" href="mapr.html#UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-2InstalltheUnravelServerRPMontheHostMachine" title="2. Install the Unravel Server RPM on the Host Machine">
+2. Install the Unravel Server RPM on the Host Machine</a>
+            </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>
+                  <a class="link" href="mapr.html#UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-GettheUnravelServerRPM" title="Get the Unravel Server RPM">Get the
+Unravel Server RPM</a>
+                </p></li><li class="listitem"><p>
+                  <a class="link" href="mapr.html#UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-Makesymlinksifrequired" title="Make symlinks if required">Make
+symlinks if required</a>
+                </p></li><li class="listitem"><p>
+                  <a class="link" href="mapr.html#UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-InstalltheUnravelServerRPM" title="Install the Unravel Server RPM">Install
+the Unravel Server RPM</a>
+                </p></li><li class="listitem"><p>
+                  <a class="link" href="mapr.html#UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-DoHost-SpecificPost-InstallationActions" title="Do Host-Specific Post-Installation Actions">
+Do Host-Specific Post-Installation Actions</a>
+                </p></li></ul></div></li><li class="listitem"><p>
+              
+3. Configure Unravel Server (Basic/Core Options)
+            </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>
+                  <a class="link" href="mapr.html#UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-EnableOptionalDaemons" title="Enable Optional Daemons">Enable
+Optional Daemons</a>
+                </p></li><li class="listitem"><p>
+                  <a class="link" href="mapr.html#UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-Modifyunravelproperties" title="Modify unravel.properties">Modify
+unravel.properties</a>
+                </p></li><li class="listitem"><p>
+                  <a class="link" href="mapr.html#UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-IfKerberosisEnabled" title="If Kerberos is Enabled:">If
+Kerberos is Enabled:</a>
+                </p></li><li class="listitem"><p>
+                  <a class="link" href="mapr.html#UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-IfSentryisEnabled" title="If Sentry is Enabled:">If Sentry is
+Enabled:</a>
+                </p></li><li class="listitem"><p>
+                  <a class="link" href="mapr.html#UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-SwitchUser" title="Switch User">Switch
+User</a>
+                </p></li><li class="listitem"><p>
+                  <a class="link" href="mapr.html#UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-DoHost-SpecificConfigurationSteps" title="Do Host-Specific Configuration Steps">
+Do Host-Specific Configuration Steps</a>
+                </p></li><li class="listitem"><p>
+                  <a class="link" href="mapr.html#UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-RestartUnravelServer" title="Restart Unravel Server">Restart
+Unravel Server</a>
+                </p></li></ul></div></li><li class="listitem"><p>
+              <a class="link" href="mapr.html#UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-4LogintoUnravelWebUI" title="4. Log into Unravel Web UI">4. Log
+into Unravel Web UI</a>
+            </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"></li><li class="listitem"><p>
+                  <a class="link" href="mapr.html#UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-Congratulations" title="Congratulations!">Congratulations!</a>
+                </p></li></ul></div></li><li class="listitem"><p>
+              
+5. (Optional) Configure Unravel Server (Advanced Options)
+            </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>
+                  <a class="link" href="mapr.html#UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-EnableAdditionalDataCollectionInstrumentation" title="Enable Additional Data Collection/Instrumentation">
+Enable Additional Data Collection/Instrumentation</a>
+                </p></li><li class="listitem"><p>
+                  <a class="link" href="mapr.html#UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-RuntheUnravelWebUIConfigurationWizard" title="Run the Unravel Web UI Configuration Wizard">
+Run the Unravel Web UI Configuration Wizard</a>
+                </p></li></ul></div></li></ul></div><h6 id="UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-Introduction" class="bridgehead">Introduction</h6><p>This topic explains how to deploy Unravel Server 4.2 on
+the MapR converged data platform. These instructions apply
+to Unravel Server 4.2. </p><p>
+          <span class="bold"><strong>Workflow Summary</strong></span>
+        </p><div class="procedure"><ol class="procedure" type="1"><li class="step"><p>Pre-installation check</p></li><li class="step"><p>Configure the host machine.</p></li><li class="step"><p>Install the Unravel Server RPM on the host machine.</p></li><li class="step"><p>Configure Unravel Server (basic/core options).</p></li><li class="step"><p>Log into Unravel Web UI.</p></li><li class="step"><p>(Optional) Configure Unravel Server (advanced options).</p></li></ol></div><h6 id="UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-Pre-InstallationCheck" class="bridgehead">Pre-Installation Check</h6><p>The following installation requirements must be met for
+successful installation of Unravel.</p><h6 id="UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-PlatformCompatibility" class="bridgehead">Platform Compatibility</h6><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>MapR 5.1-6.0.1</p></li><li class="listitem"><p>Hadoop 1.x - 2.x</p></li><li class="listitem"><p>Kafka 0.9, 0.10, 0.11, and 1.0 (Apache ver. equiv.)</p></li><li class="listitem"><p>Kerberos/MapR Tickets</p></li><li class="listitem"><p>Hive 0.9.x - 1.2.x</p></li><li class="listitem"><p>Spark 1.3.x - 2.0.x</p></li></ul></div><h6 id="UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-Hardware" class="bridgehead">Hardware</h6><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Architecture: x86_64</p></li><li class="listitem"><p>Cores: 8</p></li><li class="listitem"><p>RAM: 64GB minimum, 128GB for medium volume (&gt;25,000 jobs per
+day), 256GB for high volume (&gt;50,000 jobs per day)</p></li><li class="listitem"><p>Disk: <code class="code">/usr/local/unravel</code> with 8GB free minimum
+(can be symlink)</p></li><li class="listitem"><p>Disk: <code class="code">/srv/unravel</code> with 500GB free minimum (can be
+symlink)</p></li><li class="listitem"><p>For 60,000+ MR jobs per day, two or more gateway/edge nodes are
+recommended ("multi-host Unravel")</p></li></ul></div><h6 id="UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-Software" class="bridgehead">Software</h6><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Operating System: RedHat/Centos 6.4 - 7.4</p></li><li class="listitem"><p><code class="code">libaio.x86_64</code> installed</p></li><li class="listitem"><p><code class="code">SELINUX=permissive</code> (or disabled) should be set in
+<code class="code">/etc/selinux/config</code></p></li><li class="listitem"><p><code class="code">Elasticsearch needs number of File Descriptors to be at
+least 65,536. </code>See <a class="link" href="https://www.elastic.co/guide/en/elasticsearch/reference/current/file-descriptors.html" target="_blank">https://www.elastic.co/guide/en/elasticsearch/reference/current/file-descriptors.html</a></p></li><li class="listitem"><p>HDFS+Hive+YARN+Spark client/gateway, Hadoop and Hive commands
+in <code class="code">PATH</code></p></li><li class="listitem"><p>LDAP (AD or Open LDAP) compatible for Unravel Web UI user
+authentication (Open signup by default)</p></li><li class="listitem"><p>On Unravel Edge-node server, please <span class="bold"><strong><span class="underline">do
+not</span></strong></span> have zookeeper installed in same server</p></li></ul></div><h6 id="UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-AccessPermissions" class="bridgehead">Access Permissions</h6><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>If Kerberos is in use, a keytab for principal is required for
+access to:
+</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>Access to YARN’s “done dir” in HDFS</p></li><li class="listitem"><p>Access to YARN’s log aggregation directory in HDFS</p></li><li class="listitem"><p>Access to Spark event log directory in HDFS</p></li><li class="listitem"><p>Access to file sizes under HIve warehouse directory</p></li></ul></div></li><li class="listitem"><p>Access to YARN Resource Manager REST API</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>principal needs right to find out which RM is active</p></li></ul></div></li><li class="listitem"><p>JDBC access to the Hive Metastore (read-only user is
+sufficient)</p></li></ul></div><h6 id="UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-Network" class="bridgehead">Network</h6><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Port 3000 (or 4020) from users and entire cluster to Unravel
+Web UI</p></li><li class="listitem"><p>HDFS ports open from Hadoop cluster to Unravel Server(s)</p></li><li class="listitem"><p>For YARN, Hive Metadata DB port open to Unravel Server(s) for
+partition reporting</p></li><li class="listitem"><p>UDP and TCP port 4043 open from entire cluster to Unravel
+Server(s)</p></li><li class="listitem"><p>For Oozie, port 11000 open from Unravel Server(s) to the Oozie
+server</p></li><li class="listitem"><p>Resource Manager (RM) port 8032 from Unravel Server(s) to the
+RM server(s)</p></li><li class="listitem"><p>Port 4176, 4181 through 4189, 3316, 4091 must be
+available for localhost communication between Unravel daemons or
+services</p></li></ul></div><div dir="ltr" class="note"><h3 class="title">Note</h3><p><code class="code">HIGHLIGHTED </code>text and text with brackets ( {
+} ), except where otherwise noted, indicate where you must
+substitute your particular values for the text.</p><p><code class="code">UNRAVEL_HOST_IP</code>must be a
+fully qualified DNS or IP address</p></div><h6 id="UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-1ConfiguretheHostMachine" class="bridgehead">1. Configure the Host Machine</h6><h6 id="UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-AllocateaClusterGatewayEdgeClientHostwithHDFSAccess" class="bridgehead">Allocate a Cluster Gateway/Edge/Client Host with HDFS Access</h6><p>If you do not already have a gateway/edge/client host
+provisioned for Unravel server, follow these steps which are needed
+to enable the <code class="code">hadoop
+fs</code> command, Hive, and Spark. Although Unravel does
+not launch Hive and Spark jobs, it will be convenient for you to
+have those installed there for part 2 of the
+installation+configuration process. </p><p>For more information about the MapR client configuration,
+see <a class="link" href="https://maprdocs.mapr.com/52/ReferenceGuide/configure.sh.html" target="_blank">https://maprdocs.mapr.com/52/ReferenceGuide/configure.sh.html</a></p><p>Run the following commands on Unravel Server as
+<code class="code">root</code> substituting your site-specific values for
+<code class="code">NAME, CLDB_LIST,HISTORY_SERVER.</code></p><pre class="programlisting"># sudo yum install mapr-client.x86_64
+# sudo /opt/mapr/server/configure.sh -N {NAME} -c -C {CLDB_LIST} -HS {HISTORY_SERVER}
+# sudo yum install mapr-hive.noarch
+# sudo yum install mapr-spark.noarch</pre><h6 id="UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-ConfiguretheHostBeforeinstallingtheRPM" class="bridgehead">Configure the Host Before installing the RPM</h6><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Run the following commands on Unravel Server as
+<code class="code">root</code>:</p><pre class="programlisting"># sudo useradd -g mapr unravel
+# hadoop fs -mkdir /user/unravel
+# hadoop fs -chown unravel:mapr /user/unravel</pre></li><li class="listitem"><p>If MapR tickets are enabled, check mapr ticket for users
+<code class="code">unravel</code> and <code class="code">mapr</code> on target host now. You
+might need to export ticket environment variables in
+<code class="code">/etc/unravel_ctl</code> first.</p></li><li class="listitem"><p>Check available RAM to ensure availability:</p><pre class="programlisting"># free -g</pre></li></ul></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>For instructions on adjusting RAM allocated to MapR-FS (mfs),
+see <a class="link" href="https://community.mapr.com/docs/DOC-1209" target="_blank">https://community.mapr.com/docs/DOC-1209</a>. For
+example, edit <code class="code">/opt/mapr/conf/warden.conf</code> as
+follows:</p><pre class="programlisting">service.command.mfs.heapsize.maxpercent=10</pre><p>(only change this setting on the Unravel gateway/client
+machine). And the restart mfs.</p></li></ul></div><h6 id="UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-2InstalltheUnravelServerRPMontheHostMachine" class="bridgehead">2. Install the Unravel Server RPM on the Host Machine</h6><h6 id="UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-GettheUnravelServerRPM" class="bridgehead">Get the Unravel Server RPM</h6><p>See <a class="link" href="https://unraveldata.atlassian.net/wiki/spaces/UNDOCS/pages/226132074/Download+Unravel+Software+Versions" target="_blank">Download Unravel
+Software</a>.</p><h6 id="UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-Makesymlinksifrequired" class="bridgehead">Make symlinks if required</h6><p>If you want the two disk areas used by Unravel to be on
+different volumes, you can make symlinks to specific areas before
+installing (or do a mv and symlink after installing). Do it before
+the first install if there is insufficient space on the target
+paths <code class="code">/usr/local/unravel</code> and <code class="code">/srv/unravel</code>
+noted above.</p><h6 id="UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-InstalltheUnravelServerRPM" class="bridgehead">Install the Unravel Server RPM</h6><pre class="programlisting"># sudo rpm -U unravel-4.*.x86_64.rpm*
+# /usr/local/unravel/install_bin/await_fixups.sh</pre><p>The precise filename can vary,
+depending on how it was fetched or copied.
+The <code class="code">rpm</code> command does not require
+.<code class="code">rpm</code> suffix. The flag <code class="code">-U </code>works for either
+initial install or upgrade.</p><p>Run the
+specified <code class="code">await_fizup.sh</code> script to make sure
+background processing is finished before you do other steps. In a
+routine upgrade, it is okay to start all Unravel daemons, but do
+not stop or restart them until
+the <code class="code">await_fizup.sh</code> prints <code class="code">DONE</code> (it takes
+a few minutes).</p><p>The installation creates <code class="code">/usr/local/unravel/</code> which
+contains the executables, scripts, and settings.
+User <code class="code">unravel</code> is created. The initial internal database
+and other durable state are put in <code class="code">/srv/unravel/</code> for
+larger storage. </p><p>
+The master configuration file is
+in <code class="code">/usr/local/unravel/etc/unravel.properties</code> and the
+logs are in <code class="code">/usr/local/unravel/logs/</code>. The RPM
+installation creates user <code class="code">unravel</code> if it does not
+already exist and this can be changed after
+installation; <code class="code">/etc/init.d/unravel_*</code> scripts for
+controlling its services as well
+as <code class="code">/etc/init.d/unravel_all.sh</code> which can be used to
+manually stop, start, and get status of all daemons in proper
+order.</p><p>
+During initial install, a bundled database is used. This can be
+switched to use an <a class="link" href="https://unraveldata.atlassian.net/wiki/spaces/UN43/pages/437682525/Installing+MySQL+or+Compatible+Database+for+Unravel" target="_blank">externally managed MySQL</a>
+for production. </p><h6 id="UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-DoHost-SpecificPost-InstallationActions" class="bridgehead">Do Host-Specific Post-Installation Actions</h6><p>Run the following commands on Unravel Server:</p><pre class="programlisting"># sudo /etc/init.d/unravel_all.sh stop
+# sudo /usr/local/unravel/install_bin/switch_to_mapr.sh</pre><h6 id="UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-3ConfigureUnravelServerBasicCoreOptions" class="bridgehead">3. Configure Unravel Server (Basic/Core Options)</h6><h6 id="UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-EnableOptionalDaemons" class="bridgehead">Enable Optional Daemons</h6><p>Depending on your workload volume or kind of activity, you can
+enable additional daemons at this point, see <a class="link" href="https://unraveldata.atlassian.net/wiki/spaces/UN43/pages/226296004/Creating+Multiple+Workers+for+High+Volume+Data" target="_blank">Creating Multiple Workers for
+High Volume Data</a></p><h6 id="UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-Modifyunravelproperties" class="bridgehead">Modify unravel.properties</h6><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Open <code class="code">/usr/local/unravel/etc/unravel.properties</code>
+with <code class="code">vi</code>.</p><pre class="programlisting">
+# sudo vi /usr/local/unravel/etc/unravel.properties</pre></li><li class="listitem"><p>Edit the values in <code class="code">unravel.properties</code> using
+the guidelines and descriptions in the table below. Some of these
+need to be uncommented (remove the leading # char) after you edit
+to enable them.</p><div class="informaltable table-responsive"><table class="informaltable frame-void rules-rows"><colgroup>
+                <col></col>
+                <col></col>
+                <col></col>
+              </colgroup><thead><tr>
+                  <th class="th">
+                    <p>Property</p>
+                  </th>
+                  <th class="th">
+                    <p>Description</p>
+                  </th>
+                  <th class="th">
+                    <p>Example Values</p>
+                  </th>
+                </tr></thead><tbody><tr>
+                  <td class="td">
+                    <p>
+                      <code class="code">com.unraveldata.advertised.url</code>
+                    </p>
+                  </td>
+                  <td class="td">
+                    <p>Defines the Unravel Server URL
+for HTTP traffic.</p>
+                  </td>
+                  <td class="td">
+                    <pre class="programlisting">http://LAN_DNS:3000</pre>
+                  </td>
+                </tr><tr>
+                  <td class="td">
+                    <p>
+                      <code class="code">com.unraveldata.customer.organization</code>
+                    </p>
+                  </td>
+                  <td class="td">
+                    <p>Identifies your installation
+for reporting purposes.</p>
+                  </td>
+                  <td class="td">
+                    <pre class="programlisting">Company_and_org</pre>
+                  </td>
+                </tr><tr>
+                  <td class="td">
+                    <pre class="programlisting">com.unraveldata.tmpdir</pre>
+                  </td>
+                  <td class="td">
+                    <p><span class="bold"><strong>Optional</strong></span>.
+Location where Unravel's temp file will reside</p>
+                  </td>
+                  <td class="td">
+                    <pre class="programlisting">/srv/unravel/tmp</pre>
+                  </td>
+                </tr><tr>
+                  <td class="td">
+                    <p>
+                      <code class="code">com.unraveldata.history.maxSize.weeks</code>
+                    </p>
+                  </td>
+                  <td class="td">
+                    <p>Sets retention for search
+data.</p>
+                  </td>
+                  <td class="td">
+                    <pre class="programlisting">26</pre>
+                  </td>
+                </tr><tr>
+                  <td class="td">
+                    <p>
+                      <code class="code">com.unraveldata.hive.hook.topic.num.threads</code>
+                    </p>
+                  </td>
+                  <td class="td">
+                    <p><span class="bold"><strong>Optional</strong></span>.
+Defines the number of threads. Default is 1. Depending on job
+volume, increase this property to <span class="italic">N</span> where <span class="italic">N</span> is
+between 1 and 4, or roughly <span class="italic">ThousandJobsPerDay</span>/10.</p>
+                  </td>
+                  <td class="td">
+                    <pre class="programlisting">1</pre>
+                  </td>
+                </tr><tr>
+                  <td class="td">
+                    <p>
+                      <code class="code">com.unraveldata.job.collector.done.log.base</code>
+                    </p>
+                  </td>
+                  <td class="td">
+                    <p>HDFS path to "done" directory
+of MR logs</p>
+                  </td>
+                  <td class="td">
+                    <pre class="programlisting">/var/mapr/cluster/yarn/rm/staging/history/done</pre>
+                  </td>
+                </tr><tr>
+                  <td class="td">
+                    <p>
+                      <code class="code">com.unraveldata.job.collector.log.aggregation.base</code>
+                    </p>
+                  </td>
+                  <td class="td">
+                    <p>An HDFS path that helps locate
+MR job logs to process</p>
+                  </td>
+                  <td class="td">
+                    <pre class="programlisting">/tmp/logs/*/logs/</pre>
+                  </td>
+                </tr><tr>
+                  <td class="td">
+                    <p>
+                      <code class="code">com.unraveldata.login.admins</code>
+                    </p>
+                  </td>
+                  <td class="td">
+                    <p>Defines the usernames that can
+access Unravel Web UI's admin pages. Default is
+<code class="code">admin</code>.</p>
+                  </td>
+                  <td class="td">
+                    <pre class="programlisting">admin</pre>
+                  </td>
+                </tr><tr>
+                  <td class="td">
+                    <p>
+                      <code class="code">com.unraveldata.spark.eventlog.location</code>
+                    </p>
+                  </td>
+                  <td class="td">
+                    <p>Where to find Spark event
+logs</p>
+                  </td>
+                  <td class="td">
+                    <pre class="programlisting">maprfs:///apps/spark</pre>
+                  </td>
+                </tr><tr>
+                  <td class="td">
+                    <p>
+                      <code class="code">yarn.resourcemanager.webapp.address</code>
+                    </p>
+                  </td>
+                  <td class="td">
+                    <p>Resource Manager web app
+address</p>
+                  </td>
+                  <td class="td">
+                    <pre class="programlisting">http://example.localdomain:8088</pre>
+                  </td>
+                </tr><tr>
+                  <td class="td">
+                    <p>
+                      <code class="code">yarn.resourcemanager.webapp.username</code>
+                    </p>
+                  </td>
+                  <td class="td">
+                    <p>Resource Manager username to
+login</p>
+                  </td>
+                  <td class="td"></td>
+                </tr><tr>
+                  <td class="td">
+                    <p>
+                      <code class="code">yarn.resourcemanager.webapp.password</code>
+                    </p>
+                  </td>
+                  <td class="td">
+                    <p>Resource Manager password to
+login</p>
+                  </td>
+                  <td class="td"></td>
+                </tr><tr>
+                  <td class="td">
+                    <p>
+                      <code class="code">https.protocols</code>
+                    </p>
+                  </td>
+                  <td class="td">
+                    <p>Enable https access to
+Resource Manager</p>
+                  </td>
+                  <td class="td">
+                    <p>TLSv1.2</p>
+                  </td>
+                </tr><tr>
+                  <td class="td">
+                    <p>
+                      <code class="code">javax.jdo.option.ConnectionURL</code>
+                    </p>
+                  </td>
+                  <td class="td">
+                    <p>A JDBC connection URL</p>
+                  </td>
+                  <td class="td">
+                    <p>jdbc:mysql://example.localdomain:3306/hive<span class="bold"><strong>OR</strong></span> jdbc:postgresql://example.localdomain:7432/hive_zzzzzz</p>
+                  </td>
+                </tr><tr>
+                  <td class="td">
+                    <p>
+                      <code class="code">javax.jdo.option.ConnectionDriverName</code>
+                    </p>
+                  </td>
+                  <td class="td">
+                    <p>JDBC driver</p>
+                  </td>
+                  <td class="td">
+                    <p>com.mysql.jdbc.Driver
+<span class="bold"><strong>OR</strong></span> org.postgresql.Driver</p>
+                  </td>
+                </tr><tr>
+                  <td class="td">
+                    <p>
+                      <code class="code">javax.jdo.option.ConnectionUserName</code>
+                    </p>
+                  </td>
+                  <td class="td">
+                    <p>Hive metastore user name</p>
+                  </td>
+                  <td class="td">
+                    <p>hiveuser</p>
+                  </td>
+                </tr><tr>
+                  <td class="td">
+                    <p>
+                      <code class="code">javax.jdo.option.ConnectionPassword</code>
+                    </p>
+                  </td>
+                  <td class="td">
+                    <p>Hive metastore password</p>
+                  </td>
+                  <td class="td"></td>
+                </tr><tr>
+                  <td class="td">
+                    <p>
+                      <code class="code">com.unraveldata.metastore.databasePattern</code>
+                    </p>
+                  </td>
+                  <td class="td">
+                    <p><span class="bold"><strong>Optional</strong></span>.  Be
+selective for databases to analyze in metastore</p>
+                  </td>
+                  <td class="td">
+                    <p>s*|t*|d*</p>
+                  </td>
+                </tr><tr>
+                  <td class="td">
+                    <p>
+                      <code class="code">oozie.server.url</code>
+                    </p>
+                  </td>
+                  <td class="td">
+                    <p>Oozie URL</p>
+                  </td>
+                  <td class="td">
+                    <pre class="programlisting">http://example.localdomain:11000/oozie</pre>
+                  </td>
+                </tr></tbody></table></div></li></ul></div><h6 id="UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-IfKerberosisEnabled" class="bridgehead">If Kerberos is Enabled:</h6><p><span class="inlinemediaobject"><img src="../../image/15c3fbafa0a483.png" alt="grey_arrow_down.png"></img></span>Add authentication for HDFS...</p><p>Create or identify a principal and keytab for Unravel daemons to
+access HDFS and REST when Kerberos is enabled. </p><p>Add properties for Kerberos
+in <code class="code">/usr/local/unravel/etc/unravel.properties</code>
+(substitute correct filename and principal):</p><pre class="programlisting">
+com.unraveldata.kerberos.principal=unravel/myhost.mydomain@MYREALM
+com.unraveldata.kerberos.keytab.path=/usr/local/unravel/etc/unravel.keytab</pre><p>You can find and verify the principal
+the keytab by</p><pre class="programlisting"># klist -kt KEYTAB_FILE
+</pre><div dir="ltr" class="note"><h3 class="title">Note</h3><p>The keytab file should have chmod bits 500 and be owned by
+<code class="code">unravel</code> local user (default) or by the user you want
+to use, as explained in <a class="link" href="https://unraveldata.atlassian.net/wiki/spaces/UN43/pages/233832670/Run+Unravel+Daemons+with+Custom+User" target="_blank">Run Unravel Daemons with
+Custom User</a>.</p></div><h6 id="UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-IfSentryisEnabled" class="bridgehead">If Sentry is Enabled:</h6><p><span class="inlinemediaobject"><img src="../../image/15c3fbafa0a483.png" alt="grey_arrow_down.png"></img></span>Add these permissions...</p><p>Define your own alt principal with
+narrow privileges. The alt principal can
+be admin <code class="code">unravel </code>(created by <code class="code">rpm</code>) or one
+of your choosing. The corresponding kerberos principal does not
+need to have the same name as the local user. The user/principal
+here should correspond to the <code class="code">X</code> in the next section. The
+paths listed are examples, only. In your environment, they might be
+customized.</p><div class="informaltable table-responsive"><table class="informaltable frame-void rules-rows"><colgroup>
+            <col></col>
+            <col></col>
+            <col></col>
+            <col></col>
+          </colgroup><thead><tr>
+              <th class="th">
+                <p>Resource</p>
+              </th>
+              <th class="th">
+                <p>Principal</p>
+              </th>
+              <th class="th">
+                <p>Access</p>
+              </th>
+              <th class="th">
+                <p>Purpose</p>
+              </th>
+            </tr></thead><tbody><tr>
+              <td class="td">
+                <p>
+                  <code class="code">hdfs://user/spark/applicationHistory</code>
+                </p>
+              </td>
+              <td class="td">
+                <p>Your alt principal</p>
+              </td>
+              <td class="td">
+                <p>read</p>
+              </td>
+              <td class="td">
+                <p>Spark event log</p>
+              </td>
+            </tr><tr>
+              <td class="td">
+                <p>
+                  <code class="code">hdfs://usr/history/done</code>
+                </p>
+              </td>
+              <td class="td">
+                <p>Your alt principal</p>
+              </td>
+              <td class="td">
+                <p>read</p>
+              </td>
+              <td class="td">
+                <p>MapReduce logs</p>
+              </td>
+            </tr><tr>
+              <td class="td">
+                <p>
+                  <code class="code">hdfs://tmp/logs</code>
+                </p>
+              </td>
+              <td class="td">
+                <p>Your alt principal</p>
+              </td>
+              <td class="td">
+                <p>read</p>
+              </td>
+              <td class="td">
+                <p>YARN aggregation folder</p>
+              </td>
+            </tr><tr>
+              <td class="td">
+                <p>
+                  <code class="code">hdfs://user/hive/warehouse</code>
+                </p>
+              </td>
+              <td class="td">
+                <p>Your alt principal</p>
+              </td>
+              <td class="td">
+                <p>read</p>
+              </td>
+              <td class="td">
+                <p>Obtain table partition
+sizes</p>
+              </td>
+            </tr><tr>
+              <td class="td">
+                <p>
+                  <code class="code">Hive Metastore access</code>
+                </p>
+              </td>
+              <td class="td">
+                <p>hive</p>
+              </td>
+              <td class="td">
+                <p>read</p>
+              </td>
+              <td class="td">
+                <p>Hive table information</p>
+              </td>
+            </tr></tbody></table></div><h6 id="UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-SwitchUser" class="bridgehead">Switch User</h6><p>Depending on your cluster security configuration, you will need
+to run the <code class="code"><a class="link" href="https://unraveldata.atlassian.net/wiki/spaces/UN43/pages/233832670/Run+Unravel+Daemons+with+Custom+User" target="_blank">switch_to_user</a></code>  script. Dependencies like
+kerberos and which target user you used for access permissions
+affect this. </p><pre class="programlisting">
+# sudo /usr/local/unravel/install_bin/switch_to_user.sh x y </pre><p>where <code class="code">X</code> and <code class="code">Y</code> depend on your environment.
+See the <a class="link" href="https://unraveldata.atlassian.net/wiki/spaces/UN43/pages/233832670/Run+Unravel+Daemons+with+Custom+User" target="_blank">switch_to_user</a> page. </p><h6 id="UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-DoHost-SpecificConfigurationSteps" class="bridgehead">Do Host-Specific Configuration Steps</h6><p>For MapR, there are no
+host-specific configuration steps.</p><h6 id="UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-RestartUnravelServer" class="bridgehead">Restart Unravel Server</h6><p>After edits to <code class="code">com.unraveldata.login.admins</code> in
+<code class="code">/usr/local/unravel/etc/unravel.properties</code> it is
+necessary to run the following script in order to make changes take
+effect. The <code class="code">echo</code> command shows the page to visit with
+your browser. If you are using an ssh tunnel or http proxy, you
+might need to make adjustments. </p><pre class="programlisting"># sudo /etc/init.d/unravel_all.sh start
+# sleep 60
+# echo "http://({UNRAVEL_HOST_IP} -f):3000/"</pre><p>This completes the basic/core configuration.</p><h6 id="UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-4LogintoUnravelWebUI" class="bridgehead">4. Log into Unravel Web UI</h6><p>Using a web browser, navigate to <code class="code">http://({UNRAVEL_HOST_IP}</code>
+-f):3000/ and login as user <code class="code">admin</code> with password
+<code class="code">unraveldata</code>.</p><div dir="ltr" class="note"><h3 class="title">Note</h3><p>For the free trial version, use the Chrome web browser.</p></div><h6 id="UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-" class="bridgehead"></h6><h6 id="UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-Congratulations" class="bridgehead">Congratulations!</h6><p>Unravel Server is up and running. Unravel Web UI displays
+collected data. Check Unravel Web UI for MR jobs loading: on the
+<span class="bold"><strong>Applications</strong></span> page, select the <span class="bold"><strong>Map
+Reduce</strong></span> tab.</p><p>For instructions on using Unravel Web UI, see the <a class="link" href="../user-guide.html" title="User Guide">User Guide</a>.</p><h6 id="UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-5OptionalConfigureUnravelServerAdvancedOptions" class="bridgehead">5. (Optional) Configure Unravel Server (Advanced Options)</h6><h6 id="UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-EnableAdditionalDataCollectionInstrumentation" class="bridgehead">Enable Additional Data Collection/Instrumentation</h6><p>Install the Unravel Sensor Parcel on <code class="code">gateway/edge/client</code> nodes that
+are used to submit Hive queries to push additional information to
+Unravel Server. For details, see <a class="link" href="mapr.html#UUID-6462597c-ddfa-53a1-fc4c-bab4e04c980f" title="Step 2: Enable Additional Data Collection / Instrumentation for MapR">Step 2: Enable Additional
+Data Collection / Instrumentation for MapR</a>.</p><h6 id="UUID-cc7f92d7-d566-f912-54a8-dc70fbe6b4fa_id_Step1InstallUnravelServeronMapR-RuntheUnravelWebUIConfigurationWizard" class="bridgehead">Run the Unravel Web UI Configuration Wizard</h6><p>Run the Unravel Web UI configuration wizard to choose additional
+configuration options. For instructions on configuring advanced
+options, see the <a class="link" href="../advanced-topics.html" title="Advanced Topics">Advanced Topics</a>.</p></section><section xml:lang="en" dir="ltr" class="section original-topic" data-origin-id="UUID-4c64cc36-159f-86a5-6031-10e7f93e7790" id="UUID-6462597c-ddfa-53a1-fc4c-bab4e04c980f"><div class="titlepage"><div><div class="title"><h5 class="title">Step 2: Enable Additional Data Collection / Instrumentation for MapR</h5></div></div></div><p>
+          <span class="bold"><strong>Table of Contents</strong></span>
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+              <a class="link" href="mapr.html#UUID-6462597c-ddfa-53a1-fc4c-bab4e04c980f_id_Step2EnableAdditionalDataCollectionInstrumentationforMapR-Introduction" title="Introduction">
+Introduction</a>
+            </p></li><li class="listitem"><p>
+              <a class="link" href="mapr.html#UUID-6462597c-ddfa-53a1-fc4c-bab4e04c980f_id_Step2EnableAdditionalDataCollectionInstrumentationforMapR-1EnableAdditionalInstrumentationonUnravelServersHost" title="1. Enable Additional Instrumentation on Unravel Server's Host">
+1. Enable Additional Instrumentation on Unravel Server's
+Host</a>
+            </p></li><li class="listitem"><p>
+              <a class="link" href="mapr.html#UUID-6462597c-ddfa-53a1-fc4c-bab4e04c980f_id_Step2EnableAdditionalDataCollectionInstrumentationforMapR-2ConfirmthatUnravelWebUIShowsAdditionalData" title="2. Confirm that Unravel Web UI Shows Additional Data">
+2. Confirm that Unravel Web UI Shows Additional Data</a>
+            </p></li><li class="listitem"><p>
+              <a class="link" href="mapr.html#UUID-6462597c-ddfa-53a1-fc4c-bab4e04c980f_id_Step2EnableAdditionalDataCollectionInstrumentationforMapR-3ConfirmandAdjusttheSettingsinyarn-sitexml" title="3. Confirm and Adjust the Settings in yarn-site.xml">
+3. Confirm and Adjust the Settings in yarn-site.xml</a>
+            </p></li><li class="listitem"><p>
+              <a class="link" href="mapr.html#UUID-6462597c-ddfa-53a1-fc4c-bab4e04c980f_id_Step2EnableAdditionalDataCollectionInstrumentationforMapR-5EnableInstrumentationmanuallybyupdatingthefollowingfiles" title="5. Enable Instrumentation manually by updating the following files:">
+5. Enable Instrumentation manually by updating the following
+files:</a>
+            </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>
+                  <a class="link" href="mapr.html#UUID-6462597c-ddfa-53a1-fc4c-bab4e04c980f_id_Step2EnableAdditionalDataCollectionInstrumentationforMapR-hive-sitexmlUpdatehive-sitexml" title="Update hive-site.xml">
+Update hive-site.xml</a>
+                </p></li><li class="listitem"><p>
+                  <a class="link" href="mapr.html#UUID-6462597c-ddfa-53a1-fc4c-bab4e04c980f_id_Step2EnableAdditionalDataCollectionInstrumentationforMapR-hive-envshUpdatehive-envsh" title="Update hive-env.sh">
+Update hive-env.sh</a>
+                </p></li><li class="listitem"><p>
+                  <a class="link" href="mapr.html#UUID-6462597c-ddfa-53a1-fc4c-bab4e04c980f_id_Step2EnableAdditionalDataCollectionInstrumentationforMapR-hadoop-envshUpdatehadoop-envsh" title="Update hadoop-env.sh">
+Update hadoop-env.sh </a>
+                </p></li><li class="listitem"><p>
+                  <a class="link" href="mapr.html#UUID-6462597c-ddfa-53a1-fc4c-bab4e04c980f_id_Step2EnableAdditionalDataCollectionInstrumentationforMapR-mapred-sitexmlUpdatemapred-sitexml" title="Update mapred-site.xml">
+Update mapred-site.xml </a>
+                </p></li></ul></div></li></ul></div><h6 id="UUID-6462597c-ddfa-53a1-fc4c-bab4e04c980f_id_Step2EnableAdditionalDataCollectionInstrumentationforMapR-Introduction" class="bridgehead">Introduction</h6><p>This topic explains how to enable additional data
+collection or instrumentation on the MapR converged data
+platform. These instructions apply to Unravel Server v4.0.
+For older versions of Unravel Server, contact Unravel Support.</p><p>
+          <span class="bold"><strong>Workflow Summary</strong></span>
+        </p><div class="procedure"><ol class="procedure" type="1"><li class="step"><p>Enable additional instrumentation on Unravel Server's
+host.</p></li><li class="step"><p>Enter correct value for Hive Metastore, Resource Manager and
+Oozie properties.</p></li><li class="step"><p>Confirm that Unravel Web UI shows additional data.</p></li><li class="step"><p>Confirm and adjust the settings in
+<code class="code">yarn-site.xml</code>.</p></li><li class="step"><p>Enable additional instrumentation on other hosts in the
+cluster.</p></li></ol></div><h6 id="UUID-6462597c-ddfa-53a1-fc4c-bab4e04c980f_id_Step2EnableAdditionalDataCollectionInstrumentationforMapR-1EnableAdditionalInstrumentationonUnravelServersHost" class="bridgehead">1. Enable Additional Instrumentation on Unravel Server's Host</h6><div dir="ltr" class="note"><h3 class="title">Note</h3><p>Substitute valid values for:</p><div class="itemizedlist"><ul style="list-style-type: disc; " class="itemizedlist"><li class="listitem"><p><code class="code">UNRAVEL_HOST_IP</code> -
+fully qualified domain name or IP address</p></li><li class="listitem"><p><code class="code">SPARK_VERSION_X.Y.Z</code>- target Spark version,
+e.g., 1.3.0, 1.6.0,
+2.0.1.</p></li><li class="listitem"><p><code class="code">HIVE_VERSION</code><code class="code">_X.Y.Z</code>
+- target Hive version, e.g., 1.2.0.</p></li></ul></div></div><div dir="ltr" class="note"><h3 class="title">Note</h3><p>Best practice is to enable instrumentation on Unravel Server
+itself for testing, practice, and demonstration purposes, before
+enabling instrumentation on other gateway/edge/client nodes that do
+real client work (Hive queries, Map-Reduce jobs, Spark, and so
+on).</p><p><span class="italic">Before</span> running <code class="code">unravel_mapr_setup.sh</code>, be
+sure that these commands are available:</p><div class="itemizedlist"><ul style="list-style-type: disc; " class="itemizedlist"><li class="listitem"><p>
+                <code class="code">wget</code>
+              </p></li><li class="listitem"><p>
+                <code class="code">unzip</code>
+              </p></li><li class="listitem"><p>
+                <code class="code">hive</code>
+              </p></li><li class="listitem"><p>
+                <code class="code">spark-shell</code>
+              </p></li></ul></div></div><p>Run the shell script <code class="code">unravel_mapr_setup.sh</code> on
+Unravel Server (on <span class="bold"><strong>host1</strong></span> for multi-host Unravel
+installs). This script installs Unravel Sensor (Hive Hook) on
+Unravel Server's host:</p><pre class="programlisting">
+# sudo /usr/local/unravel/install_bin/unraveldata-clients/unravel_mapr_setup.sh install -y --unravel-server {UNRAVEL_HOST_IP}:3000  --spark-version {SPARK_VERSION_X.Y.Z} --hive-version {HIVE_VERSION_X.Y.Z}</pre><div dir="ltr" class="note"><h3 class="title">Note</h3><p>Hive hook jar is installed under:</p><p>
+            <code class="code">/usr/local/unravel_client/</code>
+          </p><p>Resource metrics sensor jars are installed under:</p><p>
+            <code class="code">/usr/local/unravel-agent/ </code>
+          </p><p>Configuration changes (for MapR 5.2) are made to:</p><p>
+            <code class="code">/opt/mapr/spark/spark-2.0.1/conf/spark-defaults.conf </code>
+          </p><p>
+            <code class="code">/opt/mapr/hive/hive-1.2/conf/hive-site.xml </code>
+          </p><p>
+            <code class="code">/opt/mapr/hive/hive-1.2/conf/hive-env.sh</code>
+          </p><p>Once the files are present on edge host where Unravel rpm is
+installed, you can tar these changes/additions up and put on other
+hosts, if that is more convenient than running the script. In all
+cases, instrumented nodes must be able to open port 4043 of Unravel
+Server (host2 if multi-host Unravel install).</p></div><h6 id="UUID-6462597c-ddfa-53a1-fc4c-bab4e04c980f_id_Step2EnableAdditionalDataCollectionInstrumentationforMapR-2ConfirmthatUnravelWebUIShowsAdditionalData" class="bridgehead">2. Confirm that Unravel Web UI Shows Additional Data</h6><p>Run a Hive job using a test script provided by Unravel
+Server:</p><p><span class="inlinemediaobject"><img src="../../image/15c3fbafa2b4c7.png" alt="lightbulb_on.png"></img></span> This is where you can see the
+effects of the instrumentation setup. Best practice is to run this
+test script on Unravel Server rather than on a gateway/edge/client
+node. That way you can verify that instrumentation is working
+first, and then enable instrumentation on other gateway/edge/client
+nodes.</p><div dir="ltr" class="note"><h3 class="title">Note</h3><p><code class="code">someUser</code><span class="bold"><strong>must</strong></span> be user that can create tables in the default
+database. If you need to use a different database, copy the script
+and edit it to change the target database.</p><p>This script creates a uniquely named table in the default
+database, adds some data, runs a Hive query on it, and then deletes
+the table.</p><p>It runs the query twice using different workflow tags so you can
+clearly see the two different runs of the same workflow in Unravel
+Web UI.</p></div><pre class="programlisting">
+# sudo -u {someUser} /usr/local/unravel/install_bin/hive_test_simple.sh</pre><h6 id="UUID-6462597c-ddfa-53a1-fc4c-bab4e04c980f_id_Step2EnableAdditionalDataCollectionInstrumentationforMapR-3ConfirmandAdjusttheSettingsinyarn-sitexml" class="bridgehead">3. Confirm and Adjust the Settings in yarn-site.xml</h6><p>Check specific properties in
+<code class="code">/opt/mapr/hadoop/hadoop-2.7.0/etc/hadoop/yarn-site.xml</code>
+to be sure that these settings are present (with your particular
+values for your Resource Manager web app address):</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><code class="code">yarn.resourcemanager.webapp.address</code>:</p><pre class="programlisting">&lt;property&gt;
+&lt;name&gt;yarn.resourcemanager.webapp.address&lt;/name&gt;
+&lt;value&gt;10.0.0.110:8088&lt;/value&gt;
+&lt;source&gt;yarn-site.xml&lt;/source&gt;
+&lt;/property&gt;</pre></li><li class="listitem"><p><code class="code">yarn.log-aggregation-enable</code>:</p><pre class="programlisting">&lt;property&gt;
+&lt;name&gt;yarn.log-aggregation-enable&lt;/name&gt;
+&lt;value&gt;true&lt;/value&gt;
+&lt;description&gt;For log aggregations&lt;/description&gt;
+&lt;/property&gt;</pre></li></ul></div><p>4.
+Enable Additional Instrumentation on Other Hosts in the
+Cluster</p><div dir="ltr" class="note"><h3 class="title">Note</h3><p>To instrument more servers, you can use the setup script
+we provide or see the effect it has and replicate it using your own
+provisioning automation system. If you already have a way to
+customize and deploy
+<code class="code">hive-site.xml</code>, <code class="code">yarn-site.xml</code> and user
+defined function jars, you can add the changes and jar from Unravel
+to your existing mechanism.</p></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Run the shell script <code class="code">unravel_mapr_setup.sh</code> on each
+node of the cluster, just like it was run on the Unravel server
+above.</p></li><li class="listitem"><p>Copy the newly edited <code class="code">yarn-site.xml</code>, from step 3,
+to all nodes.</p></li><li class="listitem"><p>Do a rolling-restart of HiveServer2.</p></li></ul></div><h6 id="UUID-6462597c-ddfa-53a1-fc4c-bab4e04c980f_id_Step2EnableAdditionalDataCollectionInstrumentationforMapR-5EnableInstrumentationmanuallybyupdatingthefollowingfiles" class="bridgehead">5. Enable Instrumentation manually by updating the following files:</h6><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+              <code class="code">hive-site.xml</code>
+            </p></li><li class="listitem"><p>
+              <code class="code">hive-env.sh</code>
+            </p></li><li class="listitem"><p>
+              <code class="code">spark-defaults.conf</code>
+            </p></li><li class="listitem"><p>
+              <code class="code">hadoop-env.sh</code>
+            </p></li><li class="listitem"><p>
+              <code class="code">mapred-site.xml</code>
+            </p></li></ul></div><div dir="ltr" class="note"><h3 class="title">Note</h3><p>Once the files are updated on edge host where Unravel rpm is
+installed, you can <code class="code">scp</code> these changes/additions and put
+on other hosts (backup original files in case need to rollback), In
+all cases, instrumented nodes must be able to open port 4043 of
+Unravel Server (host2 if multi-host Unravel install).</p><div dir="ltr" class="note"><h3 class="title">Note</h3><p>Be sure to substitute valid values for:</p><div class="itemizedlist"><ul style="list-style-type: disc; " class="itemizedlist"><li class="listitem"><p><code class="code">UNRAVEL_HOST_IP</code> -
+fully qualified domain name or IP address</p></li><li class="listitem"><p><code class="code">SPARK_VERSION_X.Y.Z</code>- target Spark version,
+e.g., 1.3.0, 1.6.0,
+2.0.1.</p></li><li class="listitem"><p><code class="code">HIVE_VERSION</code><code class="code">_X.Y.Z</code>
+- target Hive version, e.g., 1.2.0.</p></li></ul></div></div></div><h6 id="UUID-6462597c-ddfa-53a1-fc4c-bab4e04c980f_id_Step2EnableAdditionalDataCollectionInstrumentationforMapR-hive-sitexmlUpdatehive-sitexml" class="bridgehead">Update hive-site.xml</h6><p>Copy the content
+in <code class="code">/usr/local/unravel/hive-hook/hive-site.xml.snip</code> and
+append it in <code class="code">/opt/mapr/hive/hive-HIVE_VERSION_X.Y.Z/conf/hive-site.xml</code> 
+right before &lt;/configuration&gt; (replace <code class="code">{UNRAVEL_HOST_IP})</code>.</p><pre class="programlisting">&lt;property&gt;
+  &lt;name&gt;com.unraveldata.host&lt;/name&gt;
+  &lt;value&gt;{UNRAVEL_HOST_IP}&lt;/value&gt;
+  &lt;description&gt;Unravel hive-hook processing host&lt;/description&gt;
+&lt;/property&gt;
+
+&lt;property&gt;
+  &lt;name&gt;com.unraveldata.hive.hook.tcp&lt;/name&gt;
+  &lt;value&gt;true&lt;/value&gt;
+&lt;/property&gt;
+
+&lt;property&gt;
+  &lt;name&gt;com.unraveldata.hive.hdfs.dir&lt;/name&gt;
+  &lt;value&gt;/user/unravel/HOOK_RESULT_DIR&lt;/value&gt;
+  &lt;description&gt;destination for hive-hook, Unravel log processing&lt;/description&gt;
+&lt;/property&gt;
+
+&lt;property&gt;
+  &lt;name&gt;hive.exec.driver.run.hooks&lt;/name&gt;
+  &lt;value&gt;com.unraveldata.dataflow.hive.hook.HiveDriverHook&lt;/value&gt;
+  &lt;description&gt;for Unravel, from unraveldata.com&lt;/description&gt;
+&lt;/property&gt;
+
+&lt;property&gt;
+  &lt;name&gt;hive.exec.pre.hooks&lt;/name&gt;
+  &lt;value&gt;com.unraveldata.dataflow.hive.hook.HivePreHook&lt;/value&gt;
+  &lt;description&gt;for Unravel, from unraveldata.com&lt;/description&gt;
+&lt;/property&gt;
+
+&lt;property&gt;
+  &lt;name&gt;hive.exec.post.hooks&lt;/name&gt;
+  &lt;value&gt;com.unraveldata.dataflow.hive.hook.HivePostHook&lt;/value&gt;
+  &lt;description&gt;for Unravel, from unraveldata.com&lt;/description&gt;
+&lt;/property&gt;
+
+&lt;property&gt;
+  &lt;name&gt;hive.exec.failure.hooks&lt;/name&gt;
+  &lt;value&gt;com.unraveldata.dataflow.hive.hook.HiveFailHook&lt;/value&gt;
+  &lt;description&gt;for Unravel, from unraveldata.com&lt;/description&gt;
+&lt;/property&gt;
+
+&lt;/configuration&gt;</pre><h6 id="UUID-6462597c-ddfa-53a1-fc4c-bab4e04c980f_id_Step2EnableAdditionalDataCollectionInstrumentationforMapR-hive-envshUpdatehive-envsh" class="bridgehead">Update hive-env.sh</h6><p>In <code class="code">/opt/mapr/hive/hive-HIVE_VERSION_X.Y.Z/conf/hive-env.sh</code>
+append the following; substituting your local values
+<code class="code">({HIVE_VERSION_X.Y.Z}).</code></p><pre class="programlisting">
+export AUX_CLASSPATH=${AUX_CLASSPATH}:/usr/local/unravel_client/unravel-hive-{HIVE_VERSION X.Y.Z}-hook.jar
+export HIVE_AUX_JARS_PATH=${HIVE_AUX_JARS_PATH}:/usr/local/unravel_client</pre><p>Update <code class="code">spark-defaults.conf</code></p><p>In <code class="code">/opt/mapr/spark/spark-SPARK_VERSION_X.Y.Z/conf/</code><code class="code">spark-defaults.conf</code>
+append the following; substituting your local values where noted
+(<code class="code">{UNRAVEL_HOST_IP}</code>
+and <code class="code">{SPARK_VERSION_X.Y.Z}</code>).</p><pre class="programlisting">spark.unravel.server.hostport {UNRAVEL_HOST_IP}:4043
+spark.eventLog.dir maprfs:///apps/spark
+spark.history.fs.logDirectory maprfs:///apps/spark
+spark.driver.extraJavaOptions  -javaagent:/usr/local/unravel-agent/jars/btrace-agent.jar=libs=spark-{SPARK_VERSION_X.Y.Z},config=driver
+spark.executor.extraJavaOptions -javaagent:/usr/local/unravel-agent/jars/btrace-agent.jar=libs=spark-{SPARK_VERSION_X.Y.Z},config=executor</pre><h6 id="UUID-6462597c-ddfa-53a1-fc4c-bab4e04c980f_id_Step2EnableAdditionalDataCollectionInstrumentationforMapR-hadoop-envshUpdatehadoop-envsh" class="bridgehead">Update hadoop-env.sh</h6><p>In <code class="code">/opt/mapr/hadoop/hadoop-HADOOP_VERSION_X.Y.Z/etc/hadoop/hadoop-env.sh</code>
+append the following; substituting your local values where noted
+<code class="code">({HIVE_VERSION_X.Y.Z}).</code></p><pre class="programlisting">
+export HADOOP_CLASSPATH=${HADOOP_CLASSPATH}:/usr/local/unravel_client/unravel-hive-{HIVE_VERSION_X.Y.Z}.0-hook.jar</pre><h6 id="UUID-6462597c-ddfa-53a1-fc4c-bab4e04c980f_id_Step2EnableAdditionalDataCollectionInstrumentationforMapR-mapred-sitexmlUpdatemapred-sitexml" class="bridgehead">Update mapred-site.xml</h6><p>In <code class="code">/opt/mapr/hadoop/hadoop-HADOOP_VERSION_X.Y.Z/etc/hadoop/mapred-site.xml</code>
+append the following; substituting your local values where noted
+(<code class="code">{UNRAVEL_HOST_IP}</code>).</p><pre class="programlisting">&lt;property&gt;
+  &lt;name&gt;mapreduce.task.profile&lt;/name&gt;
+  &lt;value&gt;true&lt;/value&gt;
+&lt;/property&gt;
+
+&lt;property&gt;
+  &lt;name&gt;mapreduce.task.profile.maps&lt;/name&gt;
+  &lt;value&gt;0-5&lt;/value&gt;
+&lt;/property&gt;
+
+&lt;property&gt;
+  &lt;name&gt;mapreduce.task.profile.reduces&lt;/name&gt;
+  &lt;value&gt;0-5&lt;/value&gt;
+&lt;/property&gt;
+
+&lt;property&gt;
+  &lt;name&gt;mapreduce.task.profile.params&lt;/name&gt;
+  &lt;value&gt;-javaagent:/usr/local/unravel-agent/jars/btrace-agent.jar=libs=mr -Dunravel.server.hostport={UNRAVEL_HOST_IP}:4043&lt;/value&gt;
+&lt;/property&gt;
+
+&lt;property&gt;
+  &lt;name&gt;yarn.app.mapreduce.am.command-opts&lt;/name&gt;
+  &lt;value&gt;-javaagent:/usr/local/unravel-agent/jars/btrace-agent.jar=libs=mr -Dunravel.server.hostport=172.36.1.126:4043&lt;/value&gt;
+&lt;/property&gt;
+
+</pre><div dir="ltr" class="note"><h3 class="title">Note</h3><p>Make sure the original value of <code class="code">yarn.app.mapreduce.am.command-opts</code>is
+preserved, by appending the java agent setup rather than replacing
+the original value.</p></div></section></section><div class="footer-content"><div class="section-toc section-toc-after"><div class="section-toc-title">See also<span class="section-toc-title-delimiter">: </span></div></div><div class="glossary-definitions"></div></div><footer></footer></div></article><article id="search-result-wrapper"><div class="search-container"><h2>Search results</h2><ul class="searchresults"></ul><p class="noresults">No results found</p></div></article></main><div id="bottom-pager"><ul class="pager"><li class="previous"><a accesskey="p" id="header-navigation-prev" class="pull-left prev visible-lg visible-md" href="hortonworks-data-platform--hdp-.html">Prev</a></li><li class="next"><a accesskey="n" id="header-navigation-next" class="pull-right next visible-lg visible-md" href="../user-guide.html">Next</a></li></ul></div><footer class="site-footer"><div class="inner"><div class="copyright"> © 2019  </div></div></footer></div></div></div></div></body></html>

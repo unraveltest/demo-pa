@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta charset="UTF-8"></meta><meta http-equiv="x-ua-compatible" content="IE=edge"></meta><meta name="format-detection" content="telephone=no"></meta><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"></meta><meta name="search" content="default"></meta><meta name="use.ic" content="no"></meta><meta name="tocstandalone" content="no"></meta><link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|Material+Icons" rel="stylesheet"></link><meta name="theme" content="1"></meta><meta name="search.placeholder" content="Search"></meta><meta name="search.results" content="Search results"></meta><meta name="no.search.results" content="No results found"></meta><script type="text/javascript">
+var theme = '1';
+
+
+			var indexDict = new Array();
+			var store = {};
+			var portalLanguage = 'en';
+			
+					var local_csh = false;
+				
+			var useanchorlinks = false;
+			</script><title>Cloudera Distribution Including Apache Hadoop (CDH), with Cloudera Manager (CM)</title><link rel="stylesheet" type="text/css" href="../../../css/docbook.css"></link><link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css"></link><link rel="stylesheet" type="text/css" href="../../../css/font-awesome.css"></link><link rel="stylesheet" type="text/css" href="../../../css/style-print.css"></link><link rel="stylesheet" type="text/css" href="../../../css/style-common.css"></link><link rel="stylesheet" type="text/css" href="../../../css/style-modern-tables.css"></link><link rel="stylesheet" type="text/css" href="../../../css/theme1.css"></link><link rel="stylesheet" type="text/css" href="../../../css/theme1-colors.css"></link><link rel="stylesheet" type="text/css" href="../../../css/content-theme2.css"></link><link rel="stylesheet" type="text/css" href="../../../css/graphical-lists.css"></link><script src="../../../js/jquery-3/jquery-3.3.1.min.js" type="text/javascript"></script><script src="../../../js/jquery-migrate-3.0.1.min.js" type="text/javascript"></script><script src="../../../js/materialize.min.js" type="text/javascript"></script><script src="../../../js/bootstrap.min.js" type="text/javascript"></script><script src="../../../js/purl.js" type="text/javascript"></script><script src="../../../js/html5-2-mp-common.js" type="text/javascript"></script><script src="../../../js/html5-2.js" type="text/javascript"></script><script src="../../../js/clipboard.min.js" type="text/javascript"></script><script src="../../../js/fuse.min.js" type="text/javascript"></script><script src="../../../js/hilitor.js" type="text/javascript"></script><script src="../../../js/html5.fuse.search.js" type="text/javascript"></script><script src="../../js/fuzzydata.js" type="text/javascript"></script><script src="../../../js/csh.js" type="text/javascript"></script><meta xmlns:xlink="http://www.w3.org/1999/xlink" name="generator" content="Paligo"></meta><link rel="prev" href="../installation-guides.html" title="Installation Guides"></link><link rel="next" href="hortonworks-data-platform--hdp-.html" title="Hortonworks Data Platform (HDP)"></link><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script><script>
+				$(document).ready(function () {
+				$(".mediaobject img").addClass('materialboxed');
+				//Exclude images with links
+				$(".mediaobject a img").removeClass('materialboxed');
+				$('.materialboxed').materialbox();
+				});
+			</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/googlecode.min.css"></link><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script><script type="text/javascript">
+				$(document).ready(function(){
+				$('pre').each(function(i, block) {
+				hljs.highlightBlock(block);
+				});
+				});
+			</script></head><body class="theme1" data-link-prefix="../../"><header class="site-header"><nav class="site-header-navbar navbar navbar-fixed-top"><div class="navbar-container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div id="logotype-container" class="pull-left"><a class="navbar-brand" href="../../../index.html?lang=en"><img id="logotype-pageheader" src="../../../css/image/corporate-logo.svg" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div></div><div id="navbar" class="navbar-collapse collapse"><ul class="nav navbar-nav"><li><a href="#">Topnav item</a></li><li><a href="#">Topnav item 2</a></li><li><a href="#">Topnav item 3</a></li></ul></div></div></nav></header><div class="site-body"><div class="site-body-container"><div class="site-body-row"><aside class="site-sidebar"><div class="site-sidebar-header"><a href="../../../index.html?lang=en"><img id="logotype-pageheader" src="../../../css/image/corporate-logo.svg" alt="Corporate logotype" data-role="logotype" class="logo"></img></a></div><form class="site-sidebar-search" autocomplete="off"><input type="text" class="form-control search-field" placeholder="Search" id="aa-search-input"></input></form><ul class="toc nav nav-site-sidebar"><li><a href="../../unravel-4-3.html" class="topic-link section original-topic" data-origin-id="UUID-ad4faae7-0575-21de-ae5b-a25189b2119c" data-permalink="unravel-4-3.html" data-topic-level="1" data-relative-prefix=""><span class="glyphicon"></span> Unravel 4.3</a><ul><li><a href="../../unravel-4-3.html#UUID-cf26a2d6-427f-5e20-e5d4-d09fdc2c4890_id_Unravel43-ThisDocumentationisforUnravelVersion43" class="topic-link section internal" data-origin-id="">This Documentation is for Unravel Version 4.3</a></li><li><a href="../../unravel-4-3/overview.html" class="topic-link section original-topic" data-origin-id="UUID-79e407a7-688a-42d4-5a12-d4183b8bd5b0" data-permalink="unravel-4-3/overview.html" data-topic-level="2" data-relative-prefix="../"><span class="glyphicon"></span> Overview</a><ul><li><a href="../../unravel-4-3/overview.html#UUID-736e9383-473a-f9b3-aa12-2fbf7e7a1fd9_id_Overview-WhereDoesUnravelServerReside" class="topic-link section internal" data-origin-id="">Where Does Unravel Server Reside?</a></li><li><a href="../../unravel-4-3/overview.html#UUID-736e9383-473a-f9b3-aa12-2fbf7e7a1fd9_id_Overview-WhatDoesaBasicDeploymentProvide" class="topic-link section internal" data-origin-id="">What Does a Basic Deployment Provide?</a></li><li><a href="../../unravel-4-3/overview.html#UUID-736e9383-473a-f9b3-aa12-2fbf7e7a1fd9_id_Overview-WhatAreAdvancedDeploymentOptions" class="topic-link section internal" data-origin-id="">What Are Advanced Deployment Options?</a></li></ul></li><li><a href="../../unravel-4-3/installation-guides.html" class="topic-link section original-topic" data-origin-id="UUID-27409536-9797-9e9a-4a94-0464bea9f853" data-permalink="unravel-4-3/installation-guides.html" data-topic-level="2" data-relative-prefix="../"><span class="glyphicon"></span> Installation Guides</a><ul><li><a href="../../unravel-4-3/installation-guides/cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html" class="topic-link section original-topic" data-origin-id="UUID-b0e75fdf-00ff-9f98-2d49-44380e8470b2" data-permalink="unravel-4-3/installation-guides/cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html" data-topic-level="3" data-relative-prefix="../../">Cloudera Distribution Including Apache Hadoop (CDH), with Cloudera Manager (CM)</a></li><li><a href="../../unravel-4-3/installation-guides/hortonworks-data-platform--hdp-.html" class="topic-link section original-topic" data-origin-id="UUID-35ff77fc-e768-55bd-118a-21a5a8eabdf5" data-permalink="unravel-4-3/installation-guides/hortonworks-data-platform--hdp-.html" data-topic-level="3" data-relative-prefix="../../">Hortonworks Data Platform (HDP)</a></li><li><a href="../../unravel-4-3/installation-guides/mapr.html" class="topic-link section original-topic" data-origin-id="UUID-86b32cb8-0df7-079d-2a9c-0ade3a4fa4a0" data-permalink="unravel-4-3/installation-guides/mapr.html" data-topic-level="3" data-relative-prefix="../../">MapR</a></li></ul></li><li><a href="../../unravel-4-3/user-guide.html" class="topic-link section original-topic" data-origin-id="UUID-881209c5-e7cc-2205-b4a2-1d2b9d1a231f" data-permalink="unravel-4-3/user-guide.html" data-topic-level="2" data-relative-prefix="../"><span class="glyphicon"></span> User Guide</a><ul><li><a href="../../unravel-4-3/user-guide/getting-started.html" class="topic-link section original-topic" data-origin-id="UUID-617a6a3f-b72d-3605-1807-5f307b05320e" data-permalink="unravel-4-3/user-guide/getting-started.html" data-topic-level="3" data-relative-prefix="../../">Getting Started</a></li><li><a href="../../unravel-4-3/user-guide/common-ui-features.html" class="topic-link section original-topic" data-origin-id="UUID-f20f4ecd-6c33-d07f-67cf-020ef8a6a21f" data-permalink="unravel-4-3/user-guide/common-ui-features.html" data-topic-level="3" data-relative-prefix="../../">Common UI Features</a></li><li><a href="../../unravel-4-3/user-guide/auto-actions.html" class="topic-link section original-topic" data-origin-id="UUID-b985bbe7-0d13-0640-b319-564240760706" data-permalink="unravel-4-3/user-guide/auto-actions.html" data-topic-level="3" data-relative-prefix="../../">Auto Actions</a></li></ul></li><li><a href="../../unravel-4-3/advanced-topics.html" class="topic-link section original-topic" data-origin-id="UUID-c677c0ff-a929-c9c6-1093-78155532b704" data-permalink="unravel-4-3/advanced-topics.html" data-topic-level="2" data-relative-prefix="../">Advanced Topics</a></li><li><a href="../../unravel-4-3/troubleshooting.html" class="topic-link section original-topic" data-origin-id="UUID-ebe9fdd5-3059-536a-88fd-cfdf17fbc6af" data-permalink="unravel-4-3/troubleshooting.html" data-topic-level="2" data-relative-prefix="../">Troubleshooting</a></li><li><a href="../../unravel-4-3/appendices.html" class="topic-link section original-topic" data-origin-id="UUID-b4f8bb84-90d1-537f-04dc-529a76089c3d" data-permalink="unravel-4-3/appendices.html" data-topic-level="2" data-relative-prefix="../">Appendices</a></li><li><a href="../../unravel-4-3/release-notes.html" class="topic-link section original-topic" data-origin-id="UUID-a91983de-6c9c-f9ec-477f-5acda3716abb" data-permalink="unravel-4-3/release-notes.html" data-topic-level="2" data-relative-prefix="../">Release Notes</a></li></ul></li></ul></aside><div class="site-content"><h1 class="publication-title">UN43 (Unravel 4.3)</h1><div class="toolbar"><div class="toolbar-tools"><div class="tool-print"><i class="fa fa-print" aria-hidden="true">print</i></div><div class="tool-search"><i class="fa fa-search" aria-hidden="true"></i></div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><div class="breadcrumb-container"><ul class="breadcrumb"><li class="breadcrumb-link"> <a href="../../index-en.html">UN43 (Unravel 4.3)</a></li><li class="breadcrumb-link"><a href="../../unravel-4-3.html">Unravel 4.3</a></li><li class="breadcrumb-link"><a href="../installation-guides.html">Installation Guides</a></li><li class="breadcrumb-node">Cloudera Distribution Including Apache Hadoop (CDH), with Cloudera Manager (CM)</li></ul></div></div><main><div id="top-pager"><ul class="pager"><li class="previous"><a accesskey="p" id="header-navigation-prev" class="pull-left prev visible-lg visible-md" href="../installation-guides.html">Prev</a></li><li class="next"><a accesskey="n" id="header-navigation-next" class="pull-right next visible-lg visible-md" href="hortonworks-data-platform--hdp-.html">Next</a></li></ul></div><article class="topic content-container" id="content-wrapper"><div id="topic-content" class="topic-content"><section xml:lang="en" dir="ltr" class="section original-topic" data-origin-id="UUID-b0e75fdf-00ff-9f98-2d49-44380e8470b2" data-permalink="unravel-4-3/installation-guides/cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html" data-topic-level="3" data-relative-prefix="../../" id="UUID-bd216000-5291-e74a-47d4-692e19ddeca7"><div class="titlepage"><div><div class="title"><h4 class="title">Cloudera Distribution Including Apache Hadoop (CDH), with Cloudera Manager (CM)</h4></div></div></div><div dir="ltr" class="tip"><h3 class="title">Tip</h3><p>This guide is compatible with</p><div class="itemizedlist"><ul style="list-style-type: disc; " class="itemizedlist"><li class="listitem"><p>CDH 4.5 - 5.14</p></li><li class="listitem"><p>Hive versions 0.10.0 through 1.2.x</p></li><li class="listitem"><p>Spark versions 1.3, 1.5, 1.6, 2.0</p></li></ul></div></div><section dir="ltr" class="section internal" data-origin-id="" id="UUID-bd216000-5291-e74a-47d4-692e19ddeca7_id_ClouderaDistributionIncludingApacheHadoopCDHwithClouderaManagerCM-OrderedSteps"><div class="titlepage"><div><div class="title"><h5 class="title">Ordered Steps</h5></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84" title="Step 1: Install Unravel Server on CDH+CM">Step 1: Install Unravel Server on CDH+CM</a>
+              </p></li><li class="listitem"><p>
+                <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-6fc7d191-bb2a-f062-6fa9-5494db834124" title="Step 2: Install Unravel Sensor Parcel on CDH+CM">Step 2: Install Unravel Sensor Parcel on CDH+CM</a>
+              </p></li><li class="listitem"><p>
+                <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-9f93973b-fcd0-f103-3736-d7755420d2cc" title="Step 3: Enable Impala APM">Step 3: Enable Impala APM</a>
+              </p></li></ul></div></section><section xml:lang="en" dir="ltr" class="section original-topic" data-origin-id="UUID-7b7d8311-95a6-d597-7e38-b375de51a222" id="UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84"><div class="titlepage"><div><div class="title"><h5 class="title">Step 1: Install Unravel Server on CDH+CM</h5></div></div></div><p>
+          <span class="bold"><strong>Table of Contents</strong></span>
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+              <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-Introduction" title="Introduction">Introduction</a>
+            </p></li><li class="listitem"><p>
+              <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-Pre-InstallationCheck" title="Pre-Installation Check">Pre-Installation
+Check</a>
+            </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>
+                  <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-PlatformCompatibility" title="Platform Compatibility">Platform
+Compatibility</a>
+                </p></li><li class="listitem"><p>
+                  <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-Hardware" title="Hardware">Hardware</a>
+                </p></li><li class="listitem"><p>
+                  <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-Software" title="Software">Software</a>
+                </p></li><li class="listitem"><p>
+                  <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-AccessPermissions" title="Access Permissions">Access
+Permissions</a>
+                </p></li></ul></div></li><li class="listitem"><p>
+              <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-1ConfiguretheHostMachine" title="1. Configure the Host Machine">1.
+Configure the Host Machine</a>
+            </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>
+                  <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-AllocateaClusterGatewayEdgeClientHostwithHDFSAccess" title="Allocate a Cluster Gateway/Edge/Client Host with HDFS Access">
+Allocate a Cluster Gateway/Edge/Client Host with HDFS
+Access</a>
+                </p></li></ul></div></li><li class="listitem"><p>
+              <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-2InstalltheUnravelServerRPMontheHostMachine" title="2. Install the Unravel Server RPM on the Host Machine">
+2. Install the Unravel Server RPM on the Host Machine</a>
+            </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>
+                  <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-GettheUnravelServerRPM" title="Get the Unravel Server RPM">Get
+the Unravel Server RPM</a>
+                </p></li><li class="listitem"><p>
+                  <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-Makesymlinksifrequired" title="Make symlinks if required">Make
+symlinks if required</a>
+                </p></li><li class="listitem"><p>
+                  <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-InstalltheUnravelServerRPM" title="Install the Unravel Server RPM">Install
+the Unravel Server RPM</a>
+                </p></li><li class="listitem"><p>
+                  <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-DoHost-SpecificPost-InstallationActions" title="Do Host-Specific Post-Installation Actions">
+Do Host-Specific Post-Installation Actions</a>
+                </p></li></ul></div></li><li class="listitem"><p>
+              
+3. Configure Unravel Server (Basic/Core Optional for CDH)
+            </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>
+                  <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-EnableOptionalDaemons" title="Enable Optional Daemons">Enable
+Optional Daemons</a>
+                </p></li><li class="listitem"><p>
+                  <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-IfKerberosisEnabled" title="If Kerberos is Enabled:">If
+Kerberos is Enabled:</a>
+                </p></li><li class="listitem"><p>
+                  <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-IfSentryisEnabled" title="If Sentry is Enabled:">If Sentry
+is Enabled:</a>
+                </p></li><li class="listitem"><p>
+                  <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-SwitchUser" title="Switch User">Switch
+User</a>
+                </p></li><li class="listitem"><p>
+                  <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-HiveMetastoreAccess" title="Hive Metastore Access">Hive
+Metastore Access</a>
+                </p></li><li class="listitem"><p>
+                  <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-RestartUnravelServer" title="Restart Unravel Server">Restart
+Unravel Server</a>
+                </p></li></ul></div></li><li class="listitem"><p>
+              <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-4LogintoUnravelWebUI" title="4. Log into Unravel Web UI">4. Log
+into Unravel Web UI</a>
+            </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>
+                  <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-Congratulations" title="Congratulations!">Congratulations!</a>
+                </p></li></ul></div></li><li class="listitem"><p>
+              
+5. Configure Unravel Server (Advanced Options)
+            </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>
+                  <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-EnableAdditionalDataCollectionInstrumentation" title="Enable Additional Data Collection/Instrumentation">
+Enable Additional Data Collection/Instrumentation</a>
+                </p></li></ul></div></li></ul></div><h6 id="UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-Introduction" class="bridgehead">Introduction</h6><p>This topic explains how to
+deploy Unravel Server 4.4 on a CDH gateway/edge node.
+For instructions that correspond to older versions of Unravel
+Server, contact Unravel Support.</p><p>
+          <span class="bold"><strong>Workflow Summary</strong></span>
+        </p><div class="procedure"><ol class="procedure" type="1"><li class="step"><p>Pre-installation check</p></li><li class="step"><p>Configure the host machine.</p></li><li class="step"><p>Install the Unravel Server RPM on the host machine.</p></li><li class="step"><p>Configure Unravel Server (basic/core options).</p></li><li class="step"><p>Log into Unravel Web UI.</p></li><li class="step"><p>(Optional) Configure Unravel Server (advanced options).</p></li></ol></div><h6 id="UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-Pre-InstallationCheck" class="bridgehead">Pre-Installation Check</h6><p>The following installation requirements must be met for
+successful installation of Unravel.</p><h6 id="UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-PlatformCompatibility" class="bridgehead">Platform Compatibility</h6><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>CDH 5.4 - 5.14</p></li><li class="listitem"><p>Hadoop 1.x - 2.x</p></li><li class="listitem"><p>Kafka 0.9, 0.10, 0.11, and 1.0 (Apache ver. equiv.)</p></li><li class="listitem"><p>Kerberos</p></li><li class="listitem"><p>Hive 0.9.x - 1.2.x</p></li><li class="listitem"><p>Spark 1.3.x - 2.2.x</p></li></ul></div><h6 id="UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-Hardware" class="bridgehead">Hardware</h6><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Architecture: x86_64</p></li><li class="listitem"><p>Cores: 8</p></li><li class="listitem"><p>RAM: 64GB minimum, 128GB for medium volume (&gt;25,000 jobs per
+day), 256GB for high volume (&gt;50,000 jobs per day)</p></li><li class="listitem"><p>Disk: <code class="code">/usr/local/unravel</code> with 8GB free minimum
+(can be symlink)</p></li><li class="listitem"><p>Disk: <code class="code">/srv/unravel</code> with 500GB free minimum (can be
+symlink)</p></li><li class="listitem"><p>For 60,000+ MR jobs per day, two or more gateway/edge nodes are
+recommended ("multi-host Unravel")</p></li></ul></div><h6 id="UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-Software" class="bridgehead">Software</h6><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Operating System: RedHat/Centos 6.4 - 7.4</p></li><li class="listitem"><p><code class="code">libaio.x86_64</code> installed</p></li><li class="listitem"><p><code class="code">SELINUX=permissive</code> (or disabled) should be set in
+<code class="code">/etc/selinux/config</code></p></li><li class="listitem"><p>HDFS+Hive+YARN+Spark Unravel host should be a client/gateway
+(Hadoop and Hive commands in <code class="code">PATH)</code></p></li><li class="listitem"><p>If Spark2 service is installed, Unravel host should be a
+client/gateway </p></li><li class="listitem"><p>LDAP (AD or Open LDAP) compatible for Unravel Web UI user
+authentication (Open signup by default)</p></li><li class="listitem"><p>On Unravel Edge-node server, please <span class="bold"><strong><span class="underline">do
+not</span></strong></span> have zookeeper installed in same server</p></li><li class="listitem"><p>NTP should be running and in-sync with the cluster</p></li></ul></div><h6 id="UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-AccessPermissions" class="bridgehead">Access Permissions</h6><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Local user unravel:unravel is created during installation, but
+can be changed later</p></li><li class="listitem"><p>If Kerberos is in use, a keytab for principal is required for
+access to:
+</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>Access to YARN’s “done dir” in HDFS</p></li><li class="listitem"><p>Access to YARN’s log aggregation directory in HDFS</p></li><li class="listitem"><p>Access to Spark event log directory in HDFS</p></li><li class="listitem"><p>Access to file sizes under HIve warehouse directory</p></li></ul></div></li><li class="listitem"><p>Access to YARN Resource Manager REST API</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>principal needs right to find out which RM is active</p></li></ul></div></li><li class="listitem"><p>JDBC access to the Hive Metastore (read-only user is
+sufficient)</p></li><li class="listitem"><p>For Impala support, a read-only account for Cloudera Manager
+API is needed</p></li></ul></div><div dir="ltr" class="note"><h3 class="title">Note</h3><p>The RUN_AS user must be included in yarn.admin.ac, either as a
+separate user or as a member of a group, if</p><div class="itemizedlist"><ul style="list-style-type: disc; " class="itemizedlist"><li class="listitem"><p>the cluster uses kerberos for authentication, or</p></li><li class="listitem"><p>the resource manager has been configured in high availability
+mode.</p></li></ul></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Network</p></li></ul></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Port 3000 from users and entire cluster to Unravel Web UI</p></li><li class="listitem"><p>HDFS ports open from Hadoop cluster to Unravel Server(s)</p></li><li class="listitem"><p>For YARN, Hive Metadata DB port open to Unravel Server(s) for
+partition reporting</p></li><li class="listitem"><p>UDP and TCP port 4043 open from entire cluster to Unravel
+Server(s)</p></li><li class="listitem"><p>For Oozie, port 11000 open from Unravel Server(s) to the Oozie
+server</p></li><li class="listitem"><p>Resource Manager (RM) port 8032 from Unravel Server(s) to the
+RM server(s)</p></li><li class="listitem"><p>Cloudera Manager (CM) port 7180 (or 7183 for HTTPS) from
+Unravel Server(s) to CM</p></li><li class="listitem"><p>Port 4020, 4176, 4181 through 4189, 3316, 4091 must be
+available for localhost communication between Unravel daemons or
+Unravel servers (if multi-host Unravel installation)</p></li></ul></div><h6 id="UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-1ConfiguretheHostMachine" class="bridgehead">1. Configure the Host Machine</h6><h6 id="UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-AllocateaClusterGatewayEdgeClientHostwithHDFSAccess" class="bridgehead">Allocate a Cluster Gateway/Edge/Client Host with HDFS Access</h6><p>Use Cloudera Manager to create the gateway configuration for the
+Unravel server(s) that has client roles for HDFS, YARN, Spark,
+Hive, and optionally Spark2.</p><h6 id="UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-2InstalltheUnravelServerRPMontheHostMachine" class="bridgehead">2. Install the Unravel Server RPM on the Host Machine</h6><h6 id="UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-GettheUnravelServerRPM" class="bridgehead">Get the Unravel Server RPM</h6><p>See <a class="link" href="https://unraveldata.atlassian.net/wiki/spaces/UNDOCS/pages/226132074/Download+Unravel+Software+Versions" target="_blank">Download Unravel
+Software</a>.</p><h6 id="UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-Makesymlinksifrequired" class="bridgehead">Make symlinks if required</h6><p>If you want the two disk
+areas used by Unravel to be on different volumes, you can make
+symlinks to specific areas before installing (or do
+a <code class="code">mv</code> and <code class="code">symlink</code> symlink
+after installing). Do it before the first install if there is
+insufficient space on the target
+paths <code class="code">/usr/local/unravel </code>and <code class="code">/srv/unravel</code> noted
+above. </p><h6 id="UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-InstalltheUnravelServerRPM" class="bridgehead">Install the Unravel Server RPM</h6><pre class="programlisting"># sudo rpm -U unravel-4.*.x86_64.rpm*
+# /usr/local/unravel/install_bin/await_fixups.sh</pre><p>The precise filename can vary,
+depending on how it was fetched or copied.
+The <code class="code">rpm</code> command does not require
+.<code class="code">rpm</code> suffix. The flag <code class="code">-U</code> works for either
+initial install or upgrade.</p><p>Run the
+specified <code class="code">await_fixups.sh</code>  script to make sure
+background processing is finished before you do other steps. In a
+routine upgrade, it is okay to start all Unravel daemons, but do
+not stop or restart them until the <code class="code">await_fixups.sh</code> 
+prints <code class="code">DONE</code> (it takes a few minutes).</p><p>The installation creates <code class="code">/usr/local/unravel/</code> which
+contains the executables, scripts, and settings.
+User <code class="code">unravel</code> is created. The initial internal database
+and other durable state are put in <code class="code">/srv/unravel/</code> for
+larger storage.  </p><p>
+The master configuration file is
+in <code class="code">/usr/local/unravel/etc/unravel.properties</code> and the
+logs are in <code class="code">/usr/local/unravel/logs/</code>. The RPM
+installation creates user <code class="code">unravel</code> if it does not
+already exist and this can be changed after
+installation; <code class="code">/etc/init.d/unravel_*</code> scripts for
+controlling its services as well
+as <code class="code">/etc/init.d/unravel_all.sh</code> which can be used to
+manually stop, start, and get status of all daemons in proper
+order.</p><p>
+During initial install, a bundled database is used. This can be
+switched to use an <a class="link" href="https://unraveldata.atlassian.net/wiki/spaces/UN43/pages/437682525/Installing+MySQL+or+Compatible+Database+for+Unravel" target="_blank">externally managed MySQL</a>
+for production. </p><h6 id="UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-DoHost-SpecificPost-InstallationActions" class="bridgehead">Do Host-Specific Post-Installation Actions</h6><p>For CDH, there are no
+host-specific post-installation actions.</p><h6 id="UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-3ConfigureUnravelServerBasicCoreOptionalforCDH" class="bridgehead">3. Configure Unravel Server (Basic/Core Optional for CDH)</h6><h6 id="UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-EnableOptionalDaemons" class="bridgehead">Enable Optional Daemons</h6><p>Depending on your workload volume or kind of activity, you can
+enable optional daemons at this point. See <a class="link" href="https://unraveldata.atlassian.net/wiki/spaces/UN43/pages/226296004/Creating+Multiple+Workers+for+High+Volume+Data" target="_blank">Creating Multiple Workers for
+High Volume Data</a>.</p><h6 id="UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-IfKerberosisEnabled" class="bridgehead">If Kerberos is Enabled:</h6><p><span class="inlinemediaobject"><img src="../../image/15c3fbafa0a483.png" alt="grey_arrow_down.png"></img></span>Add authentication for HDFS...</p><p><a class="link" href="https://unraveldata.atlassian.net/wiki/spaces/UN43/pages/226328707/Alternate+Kerberos+Principal+for+Cluster+Access+on+CDH" target="_blank">Create</a> or identify a
+principal and keytab for Unravel daemons to access HDFS and REST
+when Kerberos is enabled. </p><p>Add properties for Kerberos in 
+<code class="code">/usr/local/unravel/etc/unravel.properties</code> (substitute
+correct filename and principal):</p><pre class="programlisting">
+com.unraveldata.kerberos.principal=unravel/myhost.mydomain@MYREALM
+com.unraveldata.kerberos.keytab.path=/usr/local/unravel/etc/unravel.keytab</pre><p>You can verify the principal in a
+keytab by using <code class="code">klist -kt KETYAB_FILE.</code>The
+keytab file should have chmod bits 500 and be owned
+by <code class="code">unravel</code> local user (default) or by the user you
+want to use, as explained in <a class="link" href="https://unraveldata.atlassian.net/wiki/spaces/UN43/pages/233832670/Run+Unravel+Daemons+with+Custom+User" target="_blank">Run Unravel Daemons with
+Custom User</a>.</p><h6 id="UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-IfSentryisEnabled" class="bridgehead">If Sentry is Enabled:</h6><p><span class="inlinemediaobject"><img src="../../image/15c3fbafa0a483.png" alt="grey_arrow_down.png"></img></span>Add these permissions...</p><p>Define your own alt principal with
+narrow privileges. The alt principal can
+be <code class="code">unravel</code> (created by <code class="code">rpm</code>) or one of
+your choosing. The corresponding kerberos principal does not need
+to have the same name as the local user. The user/principal here
+should correspond to the <code class="code">X</code> in the next section. </p><div class="informaltable table-responsive"><table class="informaltable frame-void rules-rows"><colgroup>
+            <col></col>
+            <col></col>
+            <col></col>
+            <col></col>
+          </colgroup><thead><tr>
+              <th class="th">
+                <p>Resource</p>
+              </th>
+              <th class="th">
+                <p>Principal</p>
+              </th>
+              <th class="th">
+                <p>Access</p>
+              </th>
+              <th class="th">
+                <p>Purpose</p>
+              </th>
+            </tr></thead><tbody><tr>
+              <td class="td">
+                <p>
+                  <code class="code">hdfs://user/spark/applicationHistory</code>
+                </p>
+              </td>
+              <td class="td">
+                <p>Your alt principal</p>
+              </td>
+              <td class="td">
+                <p>read</p>
+              </td>
+              <td class="td">
+                <p>Spark event log</p>
+              </td>
+            </tr><tr>
+              <td class="td">
+                <p>
+                  <code class="code">hdfs://user/spark/spark2ApplicationHistory</code>
+                </p>
+              </td>
+              <td class="td">
+                <p>Your alt principal</p>
+              </td>
+              <td class="td">
+                <p>read</p>
+              </td>
+              <td class="td">
+                <p>Spark 2 event log</p>
+              </td>
+            </tr><tr>
+              <td class="td">
+                <p>
+                  <code class="code">hdfs://user/history/</code>
+                </p>
+              </td>
+              <td class="td">
+                <p>Your alt principal</p>
+              </td>
+              <td class="td">
+                <p>read</p>
+              </td>
+              <td class="td">
+                <p>MapReduce logs</p>
+              </td>
+            </tr><tr>
+              <td class="td">
+                <p>
+                  <code class="code">hdfs://user/history/</code>
+                </p>
+              </td>
+              <td class="td">
+                <p>Your alt principal</p>
+              </td>
+              <td class="td">
+                <p>read</p>
+              </td>
+              <td class="td">
+                <p>YARN aggregation folder</p>
+              </td>
+            </tr><tr>
+              <td class="td">
+                <p>
+                  <code class="code">hdfs://tmp/logs</code>
+                </p>
+              </td>
+              <td class="td">
+                <p>Your alt principal</p>
+              </td>
+              <td class="td">
+                <p>read</p>
+              </td>
+              <td class="td">
+                <p>Obtain table partition sizes
+with "stat" only</p>
+              </td>
+            </tr><tr>
+              <td class="td">
+                <p>
+                  <code class="code">hdfs://user/hive/warehouse</code>
+                </p>
+              </td>
+              <td class="td"></td>
+              <td class="td"></td>
+              <td class="td"></td>
+            </tr></tbody></table></div><p>Please see <a class="link" href="https://unraveldata.atlassian.net/wiki/spaces/UN43/pages/374931573/Configure+Permission+for+Unravel+daemons+on+CDH+Sentry+Secured+Cluster" target="_blank">Configure Permission for
+Unravel daemons on CDH Sentry Secured Cluste</a>r on how to
+configure permissions for unravel with a Sentry enforced
+cluster.</p><p>You can find the principal by using
+<span class="italic">'klist -kt KEYTAB_FILE'</span></p><p>If you are using KMS and HDFS
+encryption and are using the hdfs principal, you might need to
+adjust <code class="code">kms-acls.xml</code>permissions in CM
+for DECRYPT_EEK if access is denied. In particular, the "done"
+directory might not allow decryption of logs by hdfs
+principal<span class="italic">.</span></p><p>If you are using "JNI" based groups
+for HDFS (a setting in CM), then you will need to add "<code class="code">export
+LD_LIBRARY_PATH=/opt/cloudera/parcels/CDH/lib/hadoop/lib/native" to
+/usr/local/unravel/etc/unravel.ext.sh</code></p><h6 id="UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-SwitchUser" class="bridgehead">Switch User</h6><p>Depending on your cluster security configuration, you will need
+to run the <code class="code"><a class="link" href="https://unraveldata.atlassian.net/wiki/spaces/UN43/pages/233832670/Run+Unravel+Daemons+with+Custom+User" target="_blank">switch_to_user</a></code> script. Dependencies like kerberos
+and which target user you used for Sentry affect this. </p><pre class="programlisting">
+# sudo /usr/local/unravel/install_bin/switch_to_user.sh x y </pre><p>where <code class="code">X </code>and <code class="code">Y</code> depend on your environment.
+See the <a class="link" href="https://unraveldata.atlassian.net/wiki/spaces/UN43/pages/233832670/Run+Unravel+Daemons+with+Custom+User" target="_blank">switch_to_user</a> page. </p><h6 id="UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-HiveMetastoreAccess" class="bridgehead">Hive Metastore Access</h6><p>Hive metastore is accessed by Unravel server to analyze table
+usage in conjunction with Hive job instrumentation. Information is
+gathered using a Hive API that works very much like beeline
+connections which leverage the jdbc database connection protocol.
+As a quick-start approach, you can set Unravel to use the
+already-defined 'hive' user that is also used by HiveServer2.
+Alternatively, a read-only metastore database user can be define.
+If you want a custom user, then do the following steps for the
+particular kind of database that is used for Hive metastore:</p><div class="procedure"><ol class="procedure" type="1"><li class="step"><p>Connect to the Hive metastore using the normal conversational
+interface (mysql or psql, etc.) as an admin that can create new
+users.</p></li><li class="step"><p>Create a user, e.g., <code class="code">unravel</code>,
+allowing access from the Unravel server host(s).</p></li><li class="step"><p>Grant select on all table in the hive database.</p></li><li class="step"><p>As the new user, use the conversational interface (mysql or
+psql, etc.) from the Unravel server to verify their access.</p></li></ol></div><h6 id="UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-RestartUnravelServer" class="bridgehead">Restart Unravel Server</h6><p>After the edits to
+ <code class="code">com.unraveldata.login.admins</code> in<code class="code">/usr/local/unravel/etc/unravel.properties</code> it is
+necessary to run the following script in order to make changes take
+effect. The <code class="code">echo</code> command shows the page to visit with
+your browser. If you are using an ssh tunnel or http proxy, you
+might need to make adjustments.  </p><pre class="programlisting"># sudo /etc/init.d/unravel_all.sh start
+# echo "http://$(hostname -f):3000/"</pre><p>This completes the basic/core configuration.</p><h6 id="UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-4LogintoUnravelWebUI" class="bridgehead">4. Log into Unravel Web UI</h6><p>Using a web browser, navigate to
+<code class="code">http://{UNRAVEL_HOST_IP}</code>:3000/
+and login as user <code class="code">admin</code> with password
+<code class="code">unraveldata</code>.  Substitute a
+fully qualified DNS or IP address for <code class="code">UNRAVEL_HOST_IP.</code></p><div dir="ltr" class="note"><h3 class="title">Note</h3><p>For the free trial version, use the Chrome web browser.</p></div><div class="mediaobject"><table style="border: 0; width: 376px; cellpadding: 0; cellspacing: 0;" class="image-viewport"><tr style="height: 250px"><td><img style="max-width: 376px; max-height: 250px; " src="../../image/15c3fbafa0e5c9.png" alt="226459918.png"></img></td></tr></table></div><h6 id="UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-Congratulations" class="bridgehead">Congratulations!</h6><p>Unravel Server is up and running. Unravel Web UI displays
+collected data. For instructions on using Unravel Web UI, see the
+<a class="link" href="../user-guide.html" title="User Guide">User Guide</a>.</p><h6 id="UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-5ConfigureUnravelServerAdvancedOptions" class="bridgehead">5. Configure Unravel Server (Advanced Options)</h6><h6 id="UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84_id_Step1InstallUnravelServeronCDHCM-EnableAdditionalDataCollectionInstrumentation" class="bridgehead">Enable Additional Data Collection/Instrumentation</h6><p>Install the Unravel Sensor Parcel on gateway/edge/client nodes
+that are used to submit Hive queries to push additional information
+to Unravel Server. For details, see <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-6fc7d191-bb2a-f062-6fa9-5494db834124" title="Step 2: Install Unravel Sensor Parcel on CDH+CM">Step 2: Install Unravel
+Sensor Parcel on CDH+CM</a>.</p></section><section xml:lang="en" dir="ltr" class="section original-topic" data-origin-id="UUID-474f1ab9-b174-0c22-23e7-4ab2bb7e38ab" id="UUID-6fc7d191-bb2a-f062-6fa9-5494db834124"><div class="titlepage"><div><div class="title"><h5 class="title">Step 2: Install Unravel Sensor Parcel on CDH+CM</h5></div></div></div><p>
+          <span class="bold"><strong>Table of Contents</strong></span>
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+              <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-6fc7d191-bb2a-f062-6fa9-5494db834124_id_Step2InstallUnravelSensorParcelonCDHCM-_17zqoqqgx4oqIntroduction" title="Introduction">
+Introduction</a>
+            </p></li><li class="listitem"><p>
+              <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-6fc7d191-bb2a-f062-6fa9-5494db834124_id_Step2InstallUnravelSensorParcelonCDHCM-1ObtainandDistributetheParcelfromUnravelServer" title="1. Obtain and Distribute the Parcel from Unravel Server">
+1. Obtain and Distribute the Parcel from Unravel Server</a>
+            </p></li><li class="listitem"><p>
+              <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-6fc7d191-bb2a-f062-6fa9-5494db834124_id_Step2InstallUnravelSensorParcelonCDHCM-2PuttheHiveHookJARinAUX_CLASSPATH" title="2. Put the Hive Hook JAR in AUX_CLASSPATH">
+2. Put the Hive Hook JAR in AUX_CLASSPATH</a>
+            </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>
+                  <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-6fc7d191-bb2a-f062-6fa9-5494db834124_id_Step2InstallUnravelSensorParcelonCDHCM-IfSentryisEnabled" title="If Sentry is Enabled:">If
+Sentry is Enabled:</a>
+                </p></li></ul></div></li><li class="listitem"><p>
+              <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-6fc7d191-bb2a-f062-6fa9-5494db834124_id_Step2InstallUnravelSensorParcelonCDHCM-ConfigureGateway3ConfiguretheGatewayAutomaticDeploymentofHiveInstrumentation" title="3. Configure the Gateway Automatic Deployment of Hive Instrumentation">
+3. Configure the Gateway Automatic Deployment of Hive
+Instrumentation</a>
+            </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>
+                  <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-6fc7d191-bb2a-f062-6fa9-5494db834124_id_Step2InstallUnravelSensorParcelonCDHCM-Setthehive-sitexmlSnippetinClouderaManagerandDeploytheHiveClientConfigurationtoGateways" title="Set the hive-site.xml Snippet in Cloudera Manager, and Deploy the Hive Client Configuration to Gateways">
+Set the hive-site.xml Snippet in Cloudera Manager, and Deploy the
+Hive Client Configuration to Gateways</a>
+                </p></li><li class="listitem"><p>
+                  <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-6fc7d191-bb2a-f062-6fa9-5494db834124_id_Step2InstallUnravelSensorParcelonCDHCM-CheckUnravelWebUI" title="Check Unravel Web UI">Check
+Unravel Web UI</a>
+                </p></li></ul></div></li><li class="listitem"><p>
+              <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-6fc7d191-bb2a-f062-6fa9-5494db834124_id_Step2InstallUnravelSensorParcelonCDHCM-4ConfiguretheGatewayAutomaticDeploymentofSparkInstrumentation" title="4. Configure the Gateway Automatic Deployment of Spark Instrumentation">
+4. Configure the Gateway Automatic Deployment of Spark
+Instrumentation</a>
+            </p></li><li class="listitem"><p>
+              
+5. Optional - Configure YARN - MapReduce (MR) JVM Sensor
+Cluster-Wide
+            </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>
+                  <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-6fc7d191-bb2a-f062-6fa9-5494db834124_id_Step2InstallUnravelSensorParcelonCDHCM-SetinClouderaManager" title="Set in Cloudera Manager">Set
+in Cloudera Manager</a>
+                </p></li></ul></div></li><li class="listitem"><p>
+              
+6. (Optional) Advanced Configuration
+            </p></li><li class="listitem"><p>
+              <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-6fc7d191-bb2a-f062-6fa9-5494db834124_id_Step2InstallUnravelSensorParcelonCDHCM-Troubleshooting" title="Troubleshooting">Troubleshooting</a>
+            </p></li><li class="listitem"><p>
+              <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-6fc7d191-bb2a-f062-6fa9-5494db834124_id_Step2InstallUnravelSensorParcelonCDHCM-References" title="References">References</a>
+            </p></li></ul></div><h6 id="UUID-6fc7d191-bb2a-f062-6fa9-5494db834124_id_Step2InstallUnravelSensorParcelonCDHCM-_17zqoqqgx4oqIntroduction" class="bridgehead">Introduction</h6><p>This topic explains how to install the Unravel Sensor parcel on
+CDH clusters using Cloudera Manager (CM). The parcel includes Hive
+Hook and Spark instrumentation JARs. Hive Hook is used to collect
+information about Hive queries in Hadoop. The Spark instrumentation
+JARs measure Spark job performance.</p><p>These instructions apply to Unravel Sensor 4.3</p><p>Before following these instructions, follow the steps in
+<a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84" title="Step 1: Install Unravel Server on CDH+CM">Step 1: Install Unravel Server on CDH+CM</a>.</p><p>
+          <span class="bold"><strong>Workflow Summary</strong></span>
+        </p><div class="procedure"><ol class="procedure" type="1"><li class="step"><p>Obtain and distribute the parcel from Unravel Server.</p></li><li class="step"><p>Put the Hive Hook JAR in <code class="code">AUX_CLASSPATH</code>.</p></li><li class="step"><p>Configure the gateway automatic deployment of Hive
+instrumentation.</p></li><li class="step"><p>Configure the gateway automatic deployment of Spark
+instrumentation.</p></li></ol></div><div dir="ltr" class="note"><h3 class="title">Note</h3><p><code class="code">HIGHLIGHTED </code>text and text with brackets ( {
+} ), except where otherwise noted, indicate where you must
+substitute your particular values for the text.</p><p>When Active Directory Kerberos is used, <code class="code">UNRAVEL_HOST_IP</code> must be
+a fully qualified path or IP address.</p></div><div dir="ltr" class="note"><h3 class="title">To Upgrade the Unravel Sensor</h3><div class="itemizedlist"><ul style="list-style-type: disc; " class="itemizedlist"><li class="listitem"><p>Check the <code class="code">UNRAVEL_SENSOR</code> parcel
+status in Cloudera Manager.</p></li><li class="listitem"><p>If an upgrade is available complete steps
+3 through 5 to perform the upgrade.</p></li></ul></div></div><h6 id="UUID-6fc7d191-bb2a-f062-6fa9-5494db834124_id_Step2InstallUnravelSensorParcelonCDHCM-1ObtainandDistributetheParcelfromUnravelServer" class="bridgehead">1. Obtain and Distribute the Parcel from Unravel Server</h6><div class="procedure"><ol class="procedure" type="1"><li class="step"><p>In Cloudera Manager (CM), go to the <span class="bold"><strong>Parcels</strong></span>
+page by clicking the parcels glyph (</p><div class="mediaobject"><table style="border: 0; width: 19px; cellpadding: 0; cellspacing: 0;" class="image-viewport"><tr><td><img style="max-width: 19px; " src="../../image/15c3fbafa12300.png" alt="447054008.png"></img></td></tr></table></div><p>) on the top of the page.</p></li><li class="step"><p>Click <span class="bold"><strong>Configuration</strong></span> to see the <span class="bold"><strong>Parcel
+Settings</strong></span> pop-up.</p></li><li class="step"><p>In the <span class="bold"><strong>Remote Parcel Repository URLs</strong></span> section
+of the <span class="bold"><strong>Parcel Settings</strong></span> pop-up, click the
+<span class="bold"><strong>+</strong></span> glyph to add a new entry.</p></li><li class="step"><p>Add <code class="code">http://{UNRAVEL_HOST_IP}:3000/parcels/cdh{X.Y}/</code>
+(include trailing slash) where <code class="code">X.Y</code> is the major, minor
+version of CDH version you are running and <code class="code">UNRAVEL_HOST_IP</code> is the host
+name or LAN IP address of Unravel Server where
+<code class="code">unravel_lr</code> is running. If you are running more than
+one version of CDH (multiple clusters) in Cloudera Manager, you can
+add more than one parcel directory from the <code class="code">UNRAVEL_HOST_IP</code>.</p></li><li class="step"><p>Click <span class="bold"><strong>Save</strong></span>.</p></li><li class="step"><p>Click <span class="bold"><strong>Check for New Parcels</strong></span>.</p></li><li class="step"><p>On the <span class="bold"><strong>Parcels</strong></span> page, pick a target cluster in
+the <span class="bold"><strong>Location</strong></span> box.</p></li><li class="step"><p>In the list of <span class="bold"><strong>Parcel Names</strong></span>, find the
+<code class="code">UNRAVEL_SENSOR</code> parcel that matches the version of the
+target cluster and click <span class="bold"><strong>Download</strong></span>.</p></li><li class="step"><p>Click <span class="bold"><strong>Distribute</strong></span>.</p></li><li class="step"><p>If you have an old parcel from Unravel, you can deactivate it
+now.</p></li><li class="step"><p>Then click <span class="bold"><strong>Activate</strong></span> on the new parcel.</p></li></ol></div><h6 id="UUID-6fc7d191-bb2a-f062-6fa9-5494db834124_id_Step2InstallUnravelSensorParcelonCDHCM-2PuttheHiveHookJARinAUX_CLASSPATH" class="bridgehead">2. Put the Hive Hook JAR in AUX_CLASSPATH</h6><div class="procedure"><ol class="procedure" type="1"><li class="step"><p>In Cloudera Manager, for the target cluster, click
+<span class="bold"><strong>Hive</strong></span> | <span class="bold"><strong>Configuration</strong></span>, and search
+for <code class="code">hive-env</code>.</p></li><li class="step"><p>In <span class="bold"><strong>Gateway Client Environment Advanced Configuration
+Snippet (Safety Valve)</strong></span> for <code class="code">hive-env.sh</code> enter
+the following exactly as shown, with no subsitutions:</p><pre class="programlisting">
+AUX_CLASSPATH=${AUX_CLASSPATH}:/opt/cloudera/parcels/UNRAVEL_SENSOR/lib/java/unravel_hive_hook.jar</pre></li><li class="step"><p>In Cloudera Manager, click <span class="bold"><strong>YARN</strong></span> |
+<span class="bold"><strong>Configuration</strong></span>, and search for
+<code class="code">hadoop-env</code>.</p></li><li class="step"><p>In <span class="bold"><strong>Gateway Client Environment Advanced Configuration
+Snippet (Safety Valve)</strong></span> for <code class="code">hadoop-env.sh</code>,
+enter the following exactly as shown, with <span class="bold"><strong>no
+subsitutions</strong></span>:</p><pre class="programlisting">
+HADOOP_CLASSPATH=${HADOOP_CLASSPATH}:/opt/cloudera/parcels/UNRAVEL_SENSOR/lib/java/unravel_hive_hook.jar</pre></li></ol></div><h6 id="UUID-6fc7d191-bb2a-f062-6fa9-5494db834124_id_Step2InstallUnravelSensorParcelonCDHCM-IfSentryisEnabled" class="bridgehead">If Sentry is Enabled:</h6><p>Sentry commands may also be needed to enable access to the Hive
+Hook JAR file. Grant privileges on the JAR files to the roles that
+run hive queries. Log into Beeline as user <code class="code">hive</code> and
+use the Hive <code class="code">SQL GRANT</code> statement to do so. For example
+(substitute <code class="code">{ROLE}</code> as
+appropriate):</p><pre class="programlisting">
+# GRANT ALL ON URI 'file:///opt/cloudera/parcels/UNRAVEL_SENSOR/lib/java/unravel_hive_hook.jar' TO ROLE {ROLE}</pre><h6 id="UUID-6fc7d191-bb2a-f062-6fa9-5494db834124_id_Step2InstallUnravelSensorParcelonCDHCM-ConfigureGateway3ConfiguretheGatewayAutomaticDeploymentofHiveInstrumentation" class="bridgehead">3. Configure the Gateway Automatic Deployment of Hive Instrumentation</h6><p>Use Cloudera Manager to deploy the <code class="code">hive-site.xml</code>
+snippet, which is the content of
+<code class="code">/usr/local/unravel/hive-hook/hive-site.xml.snip</code> on
+Unravel Server.</p><div dir="ltr" class="note"><h3 class="title">Note</h3><p>On a multi-host Unravel
+Server deployment, use
+host2's <code class="code">/usr/local/unravel/hive-hook/hive-site.xml.snip</code></p></div><h6 id="UUID-6fc7d191-bb2a-f062-6fa9-5494db834124_id_Step2InstallUnravelSensorParcelonCDHCM-Setthehive-sitexmlSnippetinClouderaManagerandDeploytheHiveClientConfigurationtoGateways" class="bridgehead">Set the hive-site.xml Snippet in Cloudera Manager, and Deploy the Hive Client Configuration to Gateways</h6><p>In Cloudera Manager (CM):</p><div class="procedure"><ol class="procedure" type="1"><li class="step"><p>Go to Hive service.</p></li><li class="step"><p>Select the <span class="bold"><strong>Configuration</strong></span> tab.</p></li><li class="step"><p>Search for <code class="code">hive-site.xml</code> in the middle of the
+page.</p></li><li class="step"><p>Add the xml snippet to <span class="bold"><strong>Hive
+Client Advanced Configuration Snippet for
+<code class="code">hive-site.xml</code></strong></span> (Gateway Default Group) (Click
+<span class="bold"><strong>View as XML</strong></span>). </p><p>If cluster has been configured with "Cloudera Navigator"; the
+<code class="code">hive.exec.post.hooks</code> property will have exsiting
+value(s). Therefore append the unravel's value into the
+existing <code class="code">hive.exec.post.hooks</code> property with a comma
+and no space. (see example below) </p><p>
+              <code class="code">com.cloudera.navigator.audit.hive.HiveExecHookContext,org.apache.hadoop.hive.ql.hooks.LineageLogger,
+com.unraveldata.dataflow.hive.hook.HivePostHook</code>
+            </p><p><span class="bold"><strong>IMPORTANT!</strong></span> The "Hive Client Advanced
+Configuration Snippet for hive-site.xml" should only have the
+Unravel class.</p><p>
+However, the "HiveServer2 Advanced Configuration Snippet for
+hive-site.xml" should have all 3 classes: 2 from Navigator and 1
+from Unravel.</p></li><li class="step"><p>Add the xml snippet to <span class="bold"><strong>HiveServer2 Advanced
+Configuration Snippet for</strong></span><code class="code">hive-site.xml</code>.
+(Click <span class="bold"><strong>View as XML</strong></span>). Like above step, if
+properties exists, append unravel's value.</p></li><li class="step"><p>Save the changes with optional comment "Unravel snippet in
+<code class="code">hive-site.xml</code><span class="bold"><strong>"</strong></span></p></li><li class="step"><p>Perform action <span class="bold"><strong>Deploy Hive Client
+Configuration</strong></span> by clicking the deploy glyph (</p><div class="mediaobject"><table style="border: 0; width: 18px; cellpadding: 0; cellspacing: 0;" class="image-viewport"><tr><td><img style="max-width: 18px; " src="../../image/15c3fbafa159d8.png" alt="447054013.png"></img></td></tr></table></div><p>) or by using the <span class="bold"><strong>Actions</strong></span>
+pull-down menu.</p></li><li class="step"><p>Restart the Hive service. (Cloudera Manager will specify a
+restart which is not necessary for activating these changes. You
+may act on CM's recommendation at a later time. )</p></li></ol></div><p>Again, monitor the situation to see if all Hive queries are
+failing with a class not found or permission problems. <span class="bold"><strong>If
+they are failing</strong></span>, you can back-out the
+<code class="code">hive-site.xml</code> advanced snippet changes in Cloudera
+Manager, deploy client configuration, and restart the Hive service
+to revert, then refer to <a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-6fc7d191-bb2a-f062-6fa9-5494db834124_id_Step2InstallUnravelSensorParcelonCDHCM-Troubleshooting" title="Troubleshooting">Troubleshooting</a>
+below.</p><h6 id="UUID-6fc7d191-bb2a-f062-6fa9-5494db834124_id_Step2InstallUnravelSensorParcelonCDHCM-CheckUnravelWebUI" class="bridgehead">Check Unravel Web UI</h6><p>If queries are running fine and appearing in Unravel Web UI,
+then you are done.</p><h6 id="UUID-6fc7d191-bb2a-f062-6fa9-5494db834124_id_Step2InstallUnravelSensorParcelonCDHCM-4ConfiguretheGatewayAutomaticDeploymentofSparkInstrumentation" class="bridgehead">4. Configure the Gateway Automatic Deployment of Spark Instrumentation</h6><div class="procedure"><ol class="procedure" type="1"><li class="step"><p>In Cloudera Manager, select the target cluster, then select the
+Spark service.</p></li><li class="step"><p>Select <span class="bold"><strong>Configuration</strong></span>.</p></li><li class="step"><p>Search for "<code class="code">spark-defaults</code>".</p></li><li class="step"><p>In the <span class="bold"><strong>Spark
+Client Advanced Configuration Snippet (Safety Valve) for
+spark-conf/spark-defaults.conf</strong></span>, enter the following
+text, substituting the highlighted text for your particular
+values:</p><div dir="ltr" class="note"><h3 class="title">Note</h3><p>On a
+multi-host Unravel Server deployment, use the fully qualified DNS
+or logical host2 for<code class="code">UNRAVEL_HOST_IP</code> which must be
+.</p></div><div dir="ltr" class="warning"><h3 class="title">Warning</h3><p>Copy the text below and paste it into the Cloudera Manager's
+<span class="bold"><strong>Spark Client Advanced Configuration Snippet (Safety
+Valve)</strong></span> box for
+<span class="bold"><strong><code class="code">spark-conf/</code>spark-defaults.conf</strong></span>. Then,
+modify the value of <code class="code">UNRAVEL_HOST_IP</code>
+and <code class="code">SPARK_VERSION</code>-X.Y
+. </p><p><code class="code">SPARK_VERSION_X.Y</code>  has
+the following possible values: <span class="bold"><strong><code class="code">spark-1.3</code></strong></span> for Spark
+1.3.x, <span class="bold"><strong><span class="bold"><strong><code class="code">spark-1.5</code></strong></span></strong></span>for
+Spark 1.5.x, <span class="bold"><strong><span class="bold"><strong><code class="code">spark-1.6</code></strong></span></strong></span>for
+Spark 1.6.x,  <span class="bold"><strong><span class="bold"><strong><code class="code">spark-2.0</code></strong></span></strong></span>for
+Spark 2.0.x, <span class="bold"><strong>spark-</strong></span><span class="bold"><strong><span class="bold"><strong><code class="code">2.2</code></strong></span></strong></span>for
+Spark 2.2.x, and <span class="bold"><strong>spark-</strong></span><span class="bold"><strong><code class="code">2.3</code></strong></span>for
+Spark 2.3.x.</p></div><pre class="programlisting">spark.unravel.server.hostport={UNRAVEL_HOST_IP}:4043 
+spark.driver.extraJavaOptions=-javaagent:/opt/cloudera/parcels/UNRAVEL_SENSOR/lib/java/btrace-agent.jar=config=driver,libs={SPARK_VERSION-X.Y}
+spark.executor.extraJavaOptions=-javaagent:/opt/cloudera/parcels/UNRAVEL_SENSOR/lib/java/btrace-agent.jar=config=executor,libs={SPARK_VERSION-X.Y}
+spark.eventLog.enabled=true</pre></li></ol></div><p>5. Save changes.</p><p>6. Deploy client configuration by
+clicking the deploy glyph (<span class="inlinemediaobject"><img style="max-width: 18px; " src="../../image/15c3fbafa159d8.png" alt="447054013.png"></img></span>) or by using the <span class="bold"><strong>Actions</strong></span>
+pull-down menu. Your spark-shell will ensure new JVM containers are
+created with the necessary extraJavaOptions for the spark drivers
+and executors.</p><div dir="ltr" class="warning"><h3 class="title">Warning</h3><p>Monitor the situation to see if all Spark queries are failing
+with a class not found or permission problems. <span class="bold"><strong>If they are
+failing</strong></span>, you can back-out
+the <code class="code">spark-defaults.conf</code> changes in Cloudera Manager,
+re-deploy client configuration, and then investigate and fix the
+issue.</p></div><h6 id="UUID-6fc7d191-bb2a-f062-6fa9-5494db834124_id_Step2InstallUnravelSensorParcelonCDHCM-ConfigureJVMSensorForYARN5Optional-ConfigureYARN-MapReduceMRJVMSensorCluster-Wide" class="bridgehead">5. Optional - Configure YARN - MapReduce (MR) JVM Sensor Cluster-Wide</h6><h6 id="UUID-6fc7d191-bb2a-f062-6fa9-5494db834124_id_Step2InstallUnravelSensorParcelonCDHCM-SetinClouderaManager" class="bridgehead">Set in Cloudera Manager</h6><p>In Cloudera Manager (CM):</p><div class="procedure"><ol class="procedure" type="1"><li class="step"><p>Go to <span class="bold"><strong>YARN</strong></span> service.</p></li><li class="step"><p>Select the <span class="bold"><strong>Configuration</strong></span> tab.</p></li><li class="step"><p>Search for <span class="bold"><strong>ApplicationMaster Java Opts
+Base</strong></span>and
+concatenate the
+following xml block properties snippet (ensure to start with a
+space and add below<span class="bold"><strong>).</strong></span></p><div dir="ltr" class="note"><h3 class="title">Note</h3><p>Make sure that "-"
+is a minus sign. You need to modify the value of <code class="code">UNRAVEL_HOST_IP</code>
+with your Unravel server IP address or a fully qualified DNS. For
+multi-host Unravel installation, use the IP address of Host2.</p></div><pre class="programlisting">
+-javaagent:/opt/cloudera/parcels/UNRAVEL_SENSOR/lib/java/btrace-agent.jar=libs=mr -Dunravel.server.hostport={UNRAVEL_HOST_IP}:4043</pre></li><li class="step"><p>Search for <span class="bold"><strong><span class="bold"><strong>MapReduce Client Advanced
+Configuration Snippet (Safety Valve) for <code class="code">mapred-site.xml</code></strong></span></strong></span>
+in the middle of the page.</p></li><li class="step"><p>Enter following xml four
+block properties snippet to <span class="bold"><strong>Gateway Default
+Group</strong></span>  (Click <span class="bold"><strong>View as XML</strong></span>).</p><pre class="programlisting">
+&lt;property&gt;&lt;name&gt;mapreduce.task.profile&lt;/name&gt;&lt;value&gt;true&lt;/value&gt;&lt;/property&gt;
+&lt;property&gt;&lt;name&gt;mapreduce.task.profile.maps&lt;/name&gt;&lt;value&gt;0-5&lt;/value&gt;&lt;/property&gt;
+&lt;property&gt;&lt;name&gt;mapreduce.task.profile.reduces&lt;/name&gt;&lt;value&gt;0-5&lt;/value&gt;&lt;/property&gt;
+&lt;property&gt;&lt;name&gt;mapreduce.task.profile.params&lt;/name&gt;&lt;value&gt;-javaagent:/opt/cloudera/parcels/UNRAVEL_SENSOR/lib/java/btrace-agent.jar=libs=mr -Dunravel.server.hostport={UNRAVEL_HOST_IP}:4043&lt;/value&gt;&lt;/property&gt;</pre></li></ol></div><p>6. Save changes.</p><p>7. Deploy client configuration by
+clicking the deploy glyph (<span class="inlinemediaobject"><img style="max-width: 18px; " src="../../image/15c3fbafa159d8.png" alt="447054013.png"></img></span>) or by using
+the <span class="bold"><strong>Actions</strong></span> pull-down menu.</p><p>8. Cloudera Manager will specify a
+restart which is not necessary to effect these changes.
+(click <span class="bold"><strong>Restart Stale Services</strong></span> if that is visible.
+However, you can also perform
+this later when you have a planned
+maintenance)</p><div dir="ltr" class="tip"><h3 class="title">Tip</h3><p>Monitor the situation and you should see in Unravel UI a
+Resource Usage tab showing you mappers and reducers when you view the Application page for any
+completed MRjob.
+Restart is important for MR sensor to be picked up by queries
+submitted via Hiveserver2.</p></div><h6 id="UUID-6fc7d191-bb2a-f062-6fa9-5494db834124_id_Step2InstallUnravelSensorParcelonCDHCM-6OptionalAdvancedConfiguration" class="bridgehead">6. (Optional) Advanced Configuration</h6><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Configuration for high volume data: see <a class="link" href="https://unraveldata.atlassian.net/wiki/spaces/UN43/pages/226296004/Creating+Multiple+Workers+for+High+Volume+Data" target="_blank">Creating Multiple Workers for
+High Volume Data</a>.</p></li><li class="listitem"><p>Add LDAP users: see <a class="link" href="https://unraveldata.atlassian.net/wiki/spaces/UN43/pages/225476774/Integrating+LDAP+Authentication+for+Unravel+Web+UI" target="_blank">Integrating LDAP
+Authentication for Unravel Web UI</a>.</p></li></ul></div><h6 id="UUID-6fc7d191-bb2a-f062-6fa9-5494db834124_id_Step2InstallUnravelSensorParcelonCDHCM-Troubleshooting" class="bridgehead">Troubleshooting</h6><div class="informaltable table-responsive"><table class="informaltable frame-void rules-rows" style="width: 91.0288%;"><colgroup>
+            <col></col>
+            <col></col>
+            <col></col>
+          </colgroup><tbody><tr>
+              <td class="td">
+                <p>
+                  <span class="bold"><strong>Symptom</strong></span>
+                </p>
+              </td>
+              <td class="td">
+                <p>
+                  <span class="bold"><strong>Problem</strong></span>
+                </p>
+              </td>
+              <td class="td">
+                <p>
+                  <span class="bold"><strong>Remedy</strong></span>
+                </p>
+              </td>
+            </tr><tr>
+              <td class="td">
+                <p>
+                  <code class="code">hadoop fs -ls
+/user/unravel/HOOK_RESULT_DIR/</code>
+                </p>
+                <p>
+shows directory does not exist</p>
+              </td>
+              <td class="td">
+                <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Unravel Server RPM is not yet installed, or</p></li><li class="listitem"><p>Unravel Server RPM is installed on a different HDFS cluster,
+or</p></li><li class="listitem"><p>HDFS home directory for Unravel does not exist, or</p></li><li class="listitem"><p>kerberos/sentry actions are needed</p></li></ul></div>
+              </td>
+              <td class="td">
+                <p>Install Unravel RPM on Unravel service host:</p>
+                <p>
+                  <code class="code">sudo rpm -U unravel*.rpm*</code>
+                </p>
+                <p>
+                  <span class="bold"><strong>OR</strong></span>
+                </p>
+                <p>
+Verify that <code class="code">unravel</code> user exists and has a
+<code class="code">/user/unravel/</code> directory in HDFS and unravel has write
+access.</p>
+              </td>
+            </tr><tr>
+              <td class="td">
+                <p><code class="code">ClassNotFound</code> error for
+<code class="code">com.unraveldata.dataflow.hive.hook.HivePreHook</code> during
+Hive query execution</p>
+              </td>
+              <td class="td">
+                <p>Unravel hive hook JAR was not found in in
+<code class="code">$HIVE_HOME/lib/</code>.</p>
+              </td>
+              <td class="td">
+                <p>Check whether UNRAVEL_SENSOR parcel was distributed and
+activated in CM.</p>
+                <p>
+                  <span class="bold"><strong>OR</strong></span>
+                </p>
+                <p>
+Put the Unravel hive-hook JAR corresponding to <code class="code">HIVE_VER</code> in <code class="code">JAR_DEST</code> on each gateway
+by:</p>
+                <p>
+                  <code class="code">cd /usr/local/unravel/hive-hook/;</code>
+                </p>
+                <p>
+                  <code class="code">cp unravel-hive-HIVE_VER*hook.jar JAR_DEST</code>
+                </p>
+              </td>
+            </tr></tbody></table></div><h6 id="UUID-6fc7d191-bb2a-f062-6fa9-5494db834124_id_Step2InstallUnravelSensorParcelonCDHCM-References" class="bridgehead">References</h6><p><a class="link" href="../../">{+}</a><a class="link" href="../../">http://www.cloudera.com/documentation/enterprise/5-3-x/topics/cm_mc_hive_udf.html#concept_nc3_mms_lr_unique_2+</a>
+see Creating Permanent Functions.</p></section><section xml:lang="en" dir="ltr" class="section original-topic" data-origin-id="UUID-00a566f3-2846-8923-20f6-362d5a20d9c2" id="UUID-9f93973b-fcd0-f103-3736-d7755420d2cc"><div class="titlepage"><div><div class="title"><h5 class="title">Step 3: Enable Impala APM</h5></div></div></div><h6 id="UUID-9f93973b-fcd0-f103-3736-d7755420d2cc_id_Step3EnableImpalaAPM-IntroductionIntroduction" class="bridgehead">Introduction</h6><p>This topic explains how to configure Unravel Server to retrieve
+Impala query data from either ClouderaManager (CM) or Impala
+daemons (<code class="code">impalad</code>). It assumes that you already have
+installed Impala on your CDH cluster.</p><p>Before following these instructions, follow the steps in
+<a class="link" href="cloudera-distribution-including-apache-hadoop--cdh-,-with-cloudera-manager--cm-.html#UUID-b26b203d-c88e-1d51-394f-e7a3d47feb84" title="Step 1: Install Unravel Server on CDH+CM">Step 1: Install Unravel Server on CDH+CM</a>.</p><div dir="ltr" class="note"><h3 class="title">Note</h3><p>By default, the ImpalaSensor task is enabled. If user wishes to
+disable ImpalaSensor, specify the following option
+in <code class="code">/usr/local/unravel/etc/unravel.properties</code> on
+Unravel Server.</p></div><pre class="programlisting">com.unraveldata.sensor.tasks.disabled=iw</pre><p>
+          <span class="bold"><strong>Workflow Summary</strong></span>
+        </p><div class="procedure"><ol class="procedure" type="1"><li class="step"><p>If you want Unravel Server to retrieve Impala query data from
+ClouderaManager, start at Using CM as the Data
+Source.</p></li><li class="step"><p>If you want Unravel Server to retrieve Impala query data from
+Impala daemons, start at Using Impalad as the Data
+Source.</p></li></ol></div><h6 id="UUID-9f93973b-fcd0-f103-3736-d7755420d2cc_id_Step3EnableImpalaAPM-UsingCMUsingCMastheDataSource" class="bridgehead">Using CM as the Data Source</h6><p>In order to this you need to
+add <code class="code">com.unraveldata.data.source=cm</code>
+in <code class="code">/usr/local/unravel/etc/unravel.properties</code>
+on Unravel Server. Further, you need to tell Unravel Server some
+information about your CM: URL, port number, login credentials, and
+so on. You do this by adding the following properties
+to <code class="code">/usr/local/unravel/etc/unravel.properties</code>
+on Unravel Server:</p><div class="informaltable table-responsive"><table class="informaltable frame-void rules-rows"><colgroup>
+            <col></col>
+            <col></col>
+          </colgroup><thead><tr>
+              <th class="th">
+                <p>Property</p>
+              </th>
+              <th class="th">
+                <p>Description</p>
+              </th>
+            </tr></thead><tbody><tr>
+              <td class="td">
+                <pre class="programlisting">com.unraveldata.cloudera.manager.url</pre>
+              </td>
+              <td class="td">
+                <p>CM internal URL. Must start with
+<code class="code">http://</code> or<code class="code"></code>https://</p>
+              </td>
+            </tr><tr>
+              <td class="td">
+                <pre class="programlisting">com.unraveldata.cloudera.manager.port</pre>
+              </td>
+              <td class="td">
+                <p>(Optional) CM port number. You only need to specify this if your
+Cloudera Manager is not on port 7180.</p>
+              </td>
+            </tr><tr>
+              <td class="td">
+                <pre class="programlisting">com.unraveldata.cloudera.manager.username</pre>
+              </td>
+              <td class="td">
+                <p>CM username</p>
+              </td>
+            </tr><tr>
+              <td class="td">
+                <pre class="programlisting">com.unraveldata.cloudera.manager.password</pre>
+              </td>
+              <td class="td">
+                <p>CM password</p>
+              </td>
+            </tr><tr>
+              <td class="td">
+                <pre class="programlisting">com.unraveldata.cloudera.manager.version</pre>
+              </td>
+              <td class="td">
+                <p>(Optional) CM version. You only need to specify this if your
+Cloudera Manager is earlier than 5.8.0.</p>
+                <p><span class="bold"><strong>Note</strong></span>: Replace the dot “.” in the version number
+with underscore “_”. In other words, if you have version 5.7.x,
+then set com.unraveldata.cloudera.manager.version=5_7_0.</p>
+              </td>
+            </tr><tr>
+              <td class="td">
+                <pre class="programlisting">com.unraveldata.cloudera.manager.cluster.name.list</pre>
+              </td>
+              <td class="td">
+                <p>A comma-separated list of cluster names</p>
+              </td>
+            </tr><tr>
+              <td class="td">
+                <pre class="programlisting">
+com.unraveldata.cloudera.manager.service.impala.name</pre>
+              </td>
+              <td class="td">
+                <p>(Optional) You only need to specify this if the Impala service
+name is not defaulted as "<code class="code">impala</code>".</p>
+              </td>
+            </tr></tbody></table></div><p>For example:</p><pre class="programlisting">com.unraveldata.data.source=cm
+com.unraveldata.cloudera.manager.url=http://mycm.somewhere.secret
+com.unraveldata.cloudera.manager.port=9997
+com.unraveldata.cloudera.manager.username=mycmname
+com.unraveldata.cloudera.manager.password=mycmpassword
+com.unraveldata.cloudera.manager.version=5_7_0
+com.unraveldata.cloudera.manager.cluster.name.list=cluster1,cluster2,cluster5
+com.unraveldata.cloudera.manager.service.impala.name=myimpalaservicename</pre><div dir="ltr" class="tip"><h3 class="title">Hints:</h3><p>To find out the cluster name:</p><pre class="programlisting">{cm_url}:{cm_port}/api/v13/clusters/</pre><p>To find out the service name:</p><pre class="programlisting">
+{cm_url}:{cm_port}/api/v13/clusters/{cluster_name}/services/
+
+</pre><p>Substitute your particular values for bracketed ClouderaManager
+(CM) properties, i.e., {cm_port}</p></div><h6 id="UUID-9f93973b-fcd0-f103-3736-d7755420d2cc_id_Step3EnableImpalaAPM-UsingImpaladUsingImpaladastheDataSource" class="bridgehead">Using Impalad as the Data Source</h6><p>Use this option if you want to import data from
+<code class="code">impalad</code> daemon. This option requires no CM
+credentials. Note that if the <code class="code">impalad</code> web interface is
+secure as indicated in <a class="link" href="https://www.cloudera.com/documentation/enterprise/5-2-x/topics/impala_security_webui.html" target="_blank">https://www.cloudera.com/documentation/enterprise/5-2-x/topics/impala_security_webui.html</a>
+and <a class="link" href="https://www.cloudera.com/documentation/enterprise/5-3-x/topics/impala_webui.html" target="_blank">https://www.cloudera.com/documentation/enterprise/5-3-x/topics/impala_webui.html</a>,
+then you need to use CM as
+the data source.</p><p>In order to use impalad as the data source you need to
+add <code class="code">com.unraveldata.data.source=impalad</code>
+in <code class="code">/usr/local/unravel/etc/unravel.properties</code>
+on Unravel Server. Further, you need to tell Unravel Server some
+information about the <code class="code">impalad</code> nodes:</p><div class="informaltable table-responsive"><table class="informaltable frame-void rules-rows"><colgroup>
+            <col></col>
+            <col></col>
+          </colgroup><thead><tr>
+              <th class="th">
+                <p>Property</p>
+              </th>
+              <th class="th">
+                <p>Description</p>
+              </th>
+            </tr></thead><tbody><tr>
+              <td class="td">
+                <pre class="programlisting">com.unraveldata.data.source</pre>
+              </td>
+              <td class="td">
+                <p>Set this to <code class="code">impalad</code>.</p>
+              </td>
+            </tr><tr>
+              <td class="td">
+                <pre class="programlisting">com.unraveldata.impalad.nodes</pre>
+              </td>
+              <td class="td">
+                <p>A comma-separated list of <code class="code">impalad</code> node IPs and
+ports (format: <code class="code">IP:port,IP:port,IP:port</code>).</p>
+              </td>
+            </tr></tbody></table></div><p>For example:</p><pre class="programlisting">com.unraveldata.data.source=impalad
+com.unraveldata.impalad.nodes=IP:port,IP:port,IP:port</pre><h6 id="UUID-9f93973b-fcd0-f103-3736-d7755420d2cc_id_Step3EnableImpalaAPM-_troubleshootingReferences" class="bridgehead">References</h6><p>
+          <a class="link" href="http://www.cloudera.com/documentation/cdh/5-1-x/Impala/Installing-and-Using-Impala/ciiu_install.html" target="_blank">https://www.cloudera.com/documentation/cdh/5-1-x/Impala/Installing-and-Using-Impala/ciiu_install.html</a>
+        </p><p>
+          <a class="link" href="https://www.cloudera.com/documentation/enterprise/5-2-x/topics/impala_security_webui.html" target="_blank">https://www.cloudera.com/documentation/enterprise/5-2-x/topics/impala_security_webui.html</a>
+        </p><p>
+          <a class="link" href="https://www.cloudera.com/documentation/enterprise/5-3-x/topics/impala_webui.html" target="_blank">https://www.cloudera.com/documentation/enterprise/5-3-x/topics/impala_webui.html</a>
+        </p></section></section><div class="footer-content"><div class="section-toc section-toc-after"><div class="section-toc-title">See also<span class="section-toc-title-delimiter">: </span></div></div><div class="glossary-definitions"></div></div><footer></footer></div></article><article id="search-result-wrapper"><div class="search-container"><h2>Search results</h2><ul class="searchresults"></ul><p class="noresults">No results found</p></div></article></main><div id="bottom-pager"><ul class="pager"><li class="previous"><a accesskey="p" id="header-navigation-prev" class="pull-left prev visible-lg visible-md" href="../installation-guides.html">Prev</a></li><li class="next"><a accesskey="n" id="header-navigation-next" class="pull-right next visible-lg visible-md" href="hortonworks-data-platform--hdp-.html">Next</a></li></ul></div><footer class="site-footer"><div class="inner"><div class="copyright"> © 2019  </div></div></footer></div></div></div></div></body></html>
