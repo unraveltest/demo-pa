@@ -9,7 +9,7 @@
   <param name="custom.css.source" select="/var/www/ccms/usr/unraveldata/xsl/custom/assets/layout-586/5c41143e57757.css"/>
   <param name="portal.logo.filename" select="/var/www/ccms/usr/unraveldata/xsl/custom/assets/layout-586/5c3fefbe2c378.png"/>
   <param name="portal.background.filename" select="/var/www/ccms/usr/unraveldata/xsl/custom/assets/layout-586/5c3fe0a99c54e.jpg"/>
-  <param name="portal.background.filename.out" select="/paligo/tmp/unraveldata/production-5c4fc2eeaf8c04.57927180/1582-UN40__Unravel_4_0-4_1_-html5/out/css/image/portal-bg.jpg"/>
+  <param name="portal.background.filename.out" select="/paligo/tmp/unraveldata/production-5c4feff446fb39.77385594/1582-UN40__Unravel_4_0-4_1_-html5/out/css/image/portal-bg.jpg"/>
   <param name="company.name" select="Unravel Data Inc."/>
   <param name="copyright.year" select=""/>
   <param name="copyright" select=" &#xA9; 2019 Unravel Data Inc. "/>
@@ -42,7 +42,7 @@
   <param name="open.category.first.topic" select="0"/>
   <param name="elastic.site.search" select=""/>
   <param name="other.custom.search" select="0"/>
-  <param name="use.page.toc" select="0"/>
+  <param name="use.page.toc" select="1"/>
   <param name="swagger.embed" select="0"/>
   <param name="use.separate.relationship.toc" select="1"/>
   <param name="in.this.section.string" select="In this section"/>
