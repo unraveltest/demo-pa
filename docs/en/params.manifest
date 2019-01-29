@@ -3,16 +3,16 @@
   <param name="html5.theme" select="1"/>
   <param name="html5.content.theme" select="2"/>
   <param name="use.algolia.search" select="0"/>
-  <param name="publication.id" select="en-UUID-e4abddd1-0378-9bc8-f92e-010d2dd7d25c"/>
+  <param name="publication.id" select="en-UUID-4db87b0a-dd58-4ac0-51a3-e5955f8c9ad8"/>
   <param name="use.fuse.search" select="1"/>
   <param name="use.multilingual.default.search" select="0"/>
-  <param name="custom.css.source" select=""/>
-  <param name="portal.logo.filename" select="css/image/corporate-logo-white.svg"/>
-  <param name="portal.background.filename" select=""/>
-  <param name="portal.background.filename.out" select="/paligo/tmp/unraveldata/production-5c3fbaf4b7faf7.33725665/420-UN43__Unravel_4_3_-html5/out/css/image/portal-bg.jpg"/>
-  <param name="company.name" select=""/>
+  <param name="custom.css.source" select="/var/www/ccms/usr/unraveldata/xsl/custom/assets/layout-586/5c41143e57757.css"/>
+  <param name="portal.logo.filename" select="/var/www/ccms/usr/unraveldata/xsl/custom/assets/layout-586/5c3fefbe2c378.png"/>
+  <param name="portal.background.filename" select="/var/www/ccms/usr/unraveldata/xsl/custom/assets/layout-586/5c3fe0a99c54e.jpg"/>
+  <param name="portal.background.filename.out" select="/paligo/tmp/unraveldata/production-5c4fc2eeaf8c04.57927180/1582-UN40__Unravel_4_0-4_1_-html5/out/css/image/portal-bg.jpg"/>
+  <param name="company.name" select="Unravel Data Inc."/>
   <param name="copyright.year" select=""/>
-  <param name="copyright" select=" &#xA9; 2019  "/>
+  <param name="copyright" select=" &#xA9; 2019 Unravel Data Inc. "/>
   <param name="sticky.header" select="0"/>
   <param name="full.width.header" select="0"/>
   <param name="cookie.consent" select="0"/>
@@ -25,7 +25,7 @@
   <param name="create.sitemap" select="0"/>
   <param name="destination.domain" select=""/>
   <param name="submit.feedback" select="0"/>
-  <param name="voting.panel" select="0"/>
+  <param name="voting.panel" select="1"/>
   <param name="feedback.email" select=""/>
   <param name="feedback.description" select="Would you like to provide feedback? Just click here to suggest edits."/>
   <param name="voting.panel.text" select="Was this helpful?"/>
@@ -35,9 +35,9 @@
   <param name="last.modified.text" select="Last modified: "/>
   <param name="categories.shown" select="4"/>
   <param name="single.topic.permalink" select=""/>
-  <param name="logo.link" select=""/>
+  <param name="logo.link" select="https://unraveldata.com/"/>
   <param name="feedback.toggle" select="no-button"/>
-  <param name="bootstrap.version" select="337"/>
+  <param name="bootstrap.version" select="340"/>
   <param name="layout.custom.style.persistent.name" select="0"/>
   <param name="open.category.first.topic" select="0"/>
   <param name="elastic.site.search" select=""/>
@@ -49,4 +49,8 @@
   <param name="seealso.string" select="See also"/>
   <param name="use.section.toc" select="after"/>
   <param name="taxonomies.relationship" select=""/>
+  <param name="use.top.nav" select="0"/>
+  <param name="external.top.nav.links" select=""/>
+  <param name="top.nav.section.depth" select="2"/>
+  <param name="gentext.for.top.nav" select="0"/>
 </params>

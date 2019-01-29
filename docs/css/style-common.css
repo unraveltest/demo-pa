@@ -416,6 +416,11 @@ img{
     display: none;
 }
 
+/* Hide the collection of definitions on topic pages */
+#topic-content .glossary-definitions {
+  display: none;
+}
+
 /* glossterm popovers */
 .popover-title{
     background-color: #fff;
@@ -446,6 +451,17 @@ img{
 .video-container.wistia .videoobject {
     padding-top: 0px;
 }
+
+.model-embed-wrapper {
+    width: 100%;
+    height: 480px;
+}
+
+.model-embed-wrapper iframe {
+    width: 100%;
+    height: 100%;
+}
+
 /*.wistia_embed{
     height: 349px;
     width: 620px;
@@ -623,3 +639,4 @@ ul.procedure ul.procedure > li::before{
 #swagger-ui .information-container{
     display: none;
 }
+
