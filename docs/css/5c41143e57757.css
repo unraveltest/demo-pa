@@ -1,0 +1,47 @@
+
+body
+{
+  font-family: 'Open Sans', "Arial", "Helvetica", sans-serif;
+  margin: 0px;
+  padding: 8px;
+  color: #343939;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* --- Custom classes --- */
+
+
+.citation {
+  font-style: italic;
+  font-weight: normal;
+  color: aqua;
+}
+
+.code {
+  font-family: monospace;
+  font-style: normal;
+  font-weight: normal;
+  color: gray;
+}
+
+.term {
+  font-weight: bold;
+  color: orange;
+}
+
+
+.guimenu {
+  font-weight: bold;
+  color: #1ca4dc;
+}
+
+.var {
+  font-family: monospace;
+  font-weight: normal;
+  font-style: italic;
+  color: red;
+}
+
+
+
