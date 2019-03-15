@@ -9,7 +9,7 @@
   <param name="custom.css.source" select="/var/www/ccms/usr/unraveldata/xsl/custom/assets/layout-586/5c8990cb00a1d.css"/>
   <param name="portal.logo.filename" select="/var/www/ccms/usr/unraveldata/xsl/custom/assets/layout-586/5c87e5197b35e.png"/>
   <param name="portal.background.filename" select="/var/www/ccms/usr/unraveldata/xsl/custom/assets/layout-586/5c3fe0a99c54e.jpg"/>
-  <param name="portal.background.filename.out" select="/paligo/tmp/unraveldata/production-5c8afdceee0707.27977389/9968-Home-html5/out/css/image/portal-bg.jpg"/>
+  <param name="portal.background.filename.out" select="/paligo/tmp/unraveldata/production-5c8c086b059783.26914514/9968-Home-html5/out/css/image/portal-bg.jpg"/>
   <param name="company.name" select="Unravel Data Inc. All rights reserved."/>
   <param name="copyright.year" select=""/>
   <param name="copyright" select=" &#xA9; 2019 Unravel Data Inc. All rights reserved. "/>
@@ -39,7 +39,7 @@
   <param name="feedback.toggle" select="no-button"/>
   <param name="bootstrap.version" select="340"/>
   <param name="layout.custom.style.persistent.name" select="0"/>
-  <param name="open.category.first.topic" select="0"/>
+  <param name="open.category.first.topic" select="1"/>
   <param name="elastic.site.search" select=""/>
   <param name="other.custom.search" select="0"/>
   <param name="use.page.toc" select="1"/>
@@ -53,7 +53,7 @@
   <param name="external.top.nav.links" select="text:Free Trial, url:https://unraveldata.com/free-trial/; text:Blog, url:https://unraveldata.com/blog/; text:Why Unravel, url:https://unraveldata.com/optimize-troubleshoot-and-analyze-big-data-performance;"/>
   <param name="top.nav.section.depth" select="2"/>
   <param name="gentext.for.top.nav" select="0"/>
-  <param name="version.dropdown.values" select="Unravel 4.0-4.1: https://unraveldata-org.github.io/UN40/?lang=en;"/>
+  <param name="version.dropdown.values" select="text:Unravel 4.5 (Current), url:https://unraveltest.github.io/demo-pa/index.html?lang=en;&#10;text:Unravel 4.4, url:https://unraveldata.atlassian.net/wiki/spaces/UN44/overview;&#10;text:Unravel 4.3, url:https://unraveldata.atlassian.net/wiki/spaces/UN43/overview;&#10;text:Unravel 4.2, url:https://unraveldata.atlassian.net/wiki/spaces/UN42/overview;&#10;text:Unravel 4.0-4.1, url:https://unraveldata.atlassian.net/wiki/spaces/UN40/overview;"/>
   <param name="enter.key.search.behaviour" select="select"/>
   <param name="versions.file" select=""/>
 </params>
